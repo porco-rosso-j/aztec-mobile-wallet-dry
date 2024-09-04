@@ -1,0 +1,10 @@
+export declare function formatProof(proof: string): string;
+export declare function formatAddress(address: string, long?: boolean): string;
+export declare function stringToBytes(str: string): number[];
+export declare function hexToBytes(hex: string): number[];
+export declare function base64ToBytes(base64: string): number[];
+export declare function bytesToHex(bytes: number[]): string;
+export declare function reverseArray(arr: any[]): any[];
+export declare function base64ToHex(base64: string): string;
+export declare function bytesToBigInt(bytes: number[]): bigint;
+export declare function bigIntToBytes(int: bigint): number[];

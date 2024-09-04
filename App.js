@@ -1,39 +1,33 @@
-import { Provider } from 'react-redux';
 import React from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
-import { PersistGate } from 'redux-persist/integration/react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { colors } from './src/styles';
-
-import { store, persistor } from './src/redux/store';
-
-import AppView from './src/modules/AppViewContainer';
-
-export default function App() {
-  return (
-    <Provider store={store}>
+import config from './tamagui.config';
+import { TamaguiProvider } from 'tamagui';
+import Home from './src/pages/home';
+import Send from './src/pages/send';
+import Currencies from './src/pages/currencies';
+import Receive from './src/pages/receive';
+import Mock from './src/pages/mock';
+const Stack = createNativeStackNavigator();
+// function App(): React.JSX.Element {
+const App = () => {
+    console.log('App');
+    return (<TamaguiProvider config={config}>
       <NavigationContainer>
-        <PersistGate
-          loading={
-            // eslint-disable-next-line react/jsx-wrap-multilines
-            <View style={styles.container}>
-              <ActivityIndicator color={colors.red} />
-            </View>
-          }
-          persistor={persistor}
-        >
-          <AppView />
-        </PersistGate>
+        <Stack.Navigator initialRouteName="Home" screenOptions={{
+            headerShown: false
+        }}>
+          <Stack.Screen name="Home" component={Home}/>
+          <Stack.Screen name="Currencies" component={Currencies}/>
+          <Stack.Screen name="Send" component={Send}/>
+          <Stack.Screen name="Receive" component={Receive}/>
+          <Stack.Screen name="Mock" component={Mock}/>
+        </Stack.Navigator>
       </NavigationContainer>
-    </Provider>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-});
+    </TamaguiProvider>
+    // <Mock />
+    // 'yeeee'
+    );
+};
+export default App;
+//# sourceMappingURL=App.js.map
