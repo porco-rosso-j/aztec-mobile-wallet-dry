@@ -7,6 +7,7 @@
         "@aztec/accounts": "0.41.0",
         "@aztec/aztec.js": "0.41.0",
         "@aztec/noir-contracts.js": "0.41.0",
+        "base64-arraybuffer": "^1.0.2",
         "ts-node": "^10.9.2",
         "typescript": "5.0.4"
     }

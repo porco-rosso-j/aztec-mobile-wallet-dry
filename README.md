@@ -1,5 +1,39 @@
 # React Native Starter 🚀
 
+    // "@aztec/accounts": "file:./aztec-packages/accounts",
+    // "postinstall": "rn-nodeify --install fs --hack",
+    // rm -rf ~/Library/Developer/Xcode/DerivedData
+    // rm -rf ./node_modules/.cache/babel-loader
+    // rm -rf ./.metro-cache
+    //     "postinstall": "patch-package",
+    //     "preinstall": "npx npm-force-resolutions",
+
+    //     "react-native-webassembly": "^0.3.3",
+    
+  "resolutions": {
+    "readable-stream@2.3.8": "2.3.8"
+  },
+  "overrides": {
+    "level-iterator-stream": {
+      "readable-stream": "2.3.8"
+    },
+    "levelup": {
+      "readable-stream": "2.3.8"
+    },
+    "@aztec/foundation": {
+      "readable-stream": "2.3.8"
+    },
+    "@aztec/accounts": {
+      "readable-stream": "2.3.8"
+    }
+  },
+
+  - aztec-scripts
+  - level-iterator-stream
+  - levelup
+
+var process = require('process');
+
 [View Demo](https://play.google.com/store/apps/details?id=com.reactnativestarter.upd) | [Download](https://github.com/flatlogic/react-native-starter.git) | [More templates](https://flatlogic.com/templates) | [Support forum](https://flatlogic.com/forum)
 
 *You're viewing the new and updated version of React Native Starter, previous version can be found under the [v1 branch](https://github.com/flatlogic/react-native-starter/tree/v1)*

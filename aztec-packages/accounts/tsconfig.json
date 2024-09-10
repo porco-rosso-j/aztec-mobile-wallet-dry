@@ -20,8 +20,8 @@
       "composite": true,
       "skipLibCheck": true,
       "noImplicitOverride": true,
-      "outDir": "./dist",
-      "rootDir": "./src",
+      "outDir": "dest",
+      "rootDir": "src",
       "tsBuildInfoFile": ".tsbuildinfo",
       "strictNullChecks": false
     },

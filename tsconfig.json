@@ -5,9 +5,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "module": "es2015",
-    "moduleResolution": "Bundler",
-    "target": "es2015",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES2015",
     "useUnknownInCatchVariables": false,
     "sourceMap": true,
     "strict": true,
@@ -17,7 +17,8 @@
     "composite": true,
     "resolveJsonModule": true,
   },
-  "include": ["src", "*.tsx", "*.ts",  "App.tsx", "index.js"],
+  // js files should be ts...?
+  "include": ["src", "*.tsx", "*.ts",  "App.tsx", "index.js", "app.json", "shim.js", "init.js"],
   "exclude": [
     "babel.config.js", // Exclude babel.config.js
     "metro.config.js",
@@ -26,5 +27,32 @@
     "node_modules",    // Exclude node_modules
     "ios",             // Exclude ios folder if not needed
     "android"          // Exclude android folder if not needed
-  ]
+  ],
+ "paths": {
+   // "@aztec/accounts/*": ["aztec-packages/accounts/dest/*"],
+  // "@aztec/accounts/*": ["./node_modules/@aztec/accounts/dest/*"],
+//   // "@aztec/accounts": ["aztec-packages/accounts/dest"],
+
+//   "@aztec/aztec.js/*": ["@aztec/aztec.js/dest/*"],
+//   // "@aztec/aztec.js": ["@aztec/aztec.js/dest"],
+
+  // "@aztec/foundation/*": ["@aztec/foundation/dest/*"],
+//   // "@aztec/foundation": ["@aztec/foundation/dest"],
+
+//   "@aztec/circuits.js/*": ["@aztec/circuits.js/dest/*"],
+ // "@aztec/circuits.js": ["@aztec/circuits.js/dest/index.js"],
+
+//   "@aztec/circuit-types/*": ["@aztec/circuit-types/dest/*"],
+//   // "@aztec/circuit-types": ["@aztec/circuit-types/dest"],
+
+//   "@aztec/ethereum/*": ["@aztec/ethereum/dest/*"],
+//   // "@aztec/ethereum": ["@aztec/ethereum/dest"],
+
+//   "@aztec/types/*": ["@aztec/types/dest/*"],
+//   // "@aztec/types": ["@aztec/types/dest"],
+
+//   "@aztec/entrypoints/*": ["@aztec/entrypoints/dest/*"],
+//   // "@aztec/entrypoints": ["@aztec/entrypoints/dest"]
+ }
 }
+

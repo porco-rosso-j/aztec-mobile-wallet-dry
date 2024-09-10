@@ -1,0 +1,90 @@
+diff --git a/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.h b/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.h
+index af1a193..82cf866 100644
+--- a/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.h
++++ b/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.h
+@@ -1,10 +1,10 @@
+ #pragma once
+ 
++#include "RNSScreenState.h"
+ #include <jsi/jsi.h>
+ #include <react/renderer/components/rnscreens/EventEmitters.h>
+ #include <react/renderer/components/rnscreens/Props.h>
+ #include <react/renderer/components/view/ConcreteViewShadowNode.h>
+-#include "RNSScreenState.h"
+ 
+ namespace facebook {
+ namespace react {
+@@ -12,15 +12,13 @@ namespace react {
+ JSI_EXPORT extern const char RNSModalScreenComponentName[];
+ 
+ class JSI_EXPORT RNSModalScreenShadowNode final
+-    : public ConcreteViewShadowNode<
+-          RNSModalScreenComponentName,
+-          RNSScreenProps,
+-          RNSScreenEventEmitter,
+-          RNSScreenState> {
+- public:
++    : public ConcreteViewShadowNode<RNSModalScreenComponentName, RNSScreenProps,
++                                    RNSScreenEventEmitter, RNSScreenState> {
++public:
+   using ConcreteViewShadowNode::ConcreteViewShadowNode;
+ 
+-  Point getContentOriginOffset(bool includeTransform) const override;
++  // Point getContentOriginOffset(bool includeTransform) const override;
++  Point getContentOriginOffset(bool includeTransform) const;
+   static ShadowNodeTraits BaseTraits() {
+     auto traits = ConcreteViewShadowNode::BaseTraits();
+     traits.set(ShadowNodeTraits::Trait::RootNodeKind);
+diff --git a/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.h b/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.h
+index a6c5dc0..0752708 100644
+--- a/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.h
++++ b/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.h
+@@ -1,12 +1,12 @@
+ #pragma once
+ 
++#include "FrameCorrectionModes.h"
++#include "RNSScreenState.h"
+ #include <jsi/jsi.h>
+ #include <react/renderer/components/rnscreens/EventEmitters.h>
+ #include <react/renderer/components/rnscreens/Props.h>
+ #include <react/renderer/components/view/ConcreteViewShadowNode.h>
+ #include <react/renderer/core/LayoutContext.h>
+-#include "FrameCorrectionModes.h"
+-#include "RNSScreenState.h"
+ 
+ namespace facebook {
+ namespace react {
+@@ -15,18 +15,17 @@ using namespace rnscreens;
+ 
+ JSI_EXPORT extern const char RNSScreenComponentName[];
+ 
+-class JSI_EXPORT RNSScreenShadowNode final : public ConcreteViewShadowNode<
+-                                                 RNSScreenComponentName,
+-                                                 RNSScreenProps,
+-                                                 RNSScreenEventEmitter,
+-                                                 RNSScreenState> {
+- public:
++class JSI_EXPORT RNSScreenShadowNode final
++    : public ConcreteViewShadowNode<RNSScreenComponentName, RNSScreenProps,
++                                    RNSScreenEventEmitter, RNSScreenState> {
++public:
+   using ConcreteViewShadowNode::ConcreteViewShadowNode;
+   using StateData = ConcreteViewShadowNode::ConcreteStateData;
+ 
+ #pragma mark - ShadowNode overrides
+ 
+-  Point getContentOriginOffset(bool includeTransform) const override;
++  // Point getContentOriginOffset(bool includeTransform) const override;
++  Point getContentOriginOffset(bool includeTransform) const;
+ 
+   void layout(LayoutContext layoutContext) override;
+ 
+@@ -36,7 +35,7 @@ class JSI_EXPORT RNSScreenShadowNode final : public ConcreteViewShadowNode<
+ 
+   FrameCorrectionModes &getFrameCorrectionModes();
+ 
+- private:
++private:
+ #ifdef ANDROID
+   void applyFrameCorrections();
+ 

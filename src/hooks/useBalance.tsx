@@ -1,11 +1,46 @@
 import { useEffect, useState } from 'react';
 // import { AztecAddress, createPXEClient } from '@aztec/aztec.js';
-// import { getDeployedTestAccountsWallets } from '@aztec/accounts/testing';
+import { BarretenbergSync } from '@aztec/bb.js';
+// // @ts-ignore
+// import { INITIAL_TEST_SECRET_KEYS } from '@aztec/accounts/testing';
+// import { createPXEClient, initAztecJs } from '@aztec/aztec.js';
+
+// import { INITIAL_TEST_SECRET_KEYS } from '../dest/testing';
 // import { TokenContract } from '@aztec/noir-contracts.js/Token';
 export const PXE_URL = 'http://localhost:8080';
 
 export const useBalance = (address: string, token: string) => {
   const [balance, setBalance] = useState<number[]>([]);
+
+  useEffect(() => {
+    const _getSingleton = async () => {
+      try {
+        console.log(
+          'WebAssembly availability:',
+          typeof WebAssembly !== 'undefined'
+        );
+
+        // Wait for initSingleton to complete
+        await BarretenbergSync.initSingleton();
+        //  await initAztecJs();
+        // console.log('BarretenbergSync', BarretenbergSync);
+        // Ensure initSingleton has fully completed before accessing getSingleton()
+        // const barretenberg = BarretenbergSync.getSingleton();
+        // console.log('barretenberg', barretenberg);
+        // const pxe = createPXEClient(PXE_URL);
+        // console.log('pxe', pxe);
+        // console.log('INITIAL_TEST_SECRET_KEYS: ', INITIAL_TEST_SECRET_KEYS);
+        // Now, continue with balance retrieval logic using `barretenberg`
+        // For example:
+        // const balance = await barretenberg.getBalance(address, token);
+        // setBalance(balance);
+      } catch (error) {
+        console.error('Error initializing BarretenbergSync:', error);
+      }
+    };
+
+    _getSingleton();
+  }, []);
 
   useEffect(() => {
     const getBalance = async () => {
