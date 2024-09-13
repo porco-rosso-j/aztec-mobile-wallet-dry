@@ -4,9 +4,12 @@
     "description": "",
     "type": "module",
     "dependencies": {
-        "@aztec/accounts": "0.41.0",
-        "@aztec/aztec.js": "0.41.0",
-        "@aztec/noir-contracts.js": "0.41.0",
+        "@aztec/accounts": "0.46.1",
+        "@aztec/aztec.js": "0.46.1",
+        "@aztec/foundation": "0.46.1",
+        "@aztec/bb.js": "0.46.1",
+        "@aztec/circuits.js": "0.46.1",
+        "@aztec/noir-contracts.js": "0.46.1",
         "base64-arraybuffer": "^1.0.2",
         "ts-node": "^10.9.2",
         "typescript": "5.0.4"
