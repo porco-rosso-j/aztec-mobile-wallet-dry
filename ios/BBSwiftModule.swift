@@ -21,10 +21,11 @@ class BBSwiftModule: NSObject {
     print("BBSwiftModule initialized in swift")
   }
   
-  func requiresMainQueueSetup() -> Bool {
-    // Return `true` if your module initializes any UI components
-    return false
-  }
+//  @objc
+//   func requiresMainQueueSetup() -> Bool {
+//     // Return `true` if your module initializes any UI components
+//     return false
+//   }
   
   @objc
   func pedersenCommit(_ inputs: [NSNumber]) -> [UInt8]? {
