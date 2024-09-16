@@ -23,22 +23,35 @@
 "@aztec/accounts@file:../yarn-project-async/accounts":
   version "0.1.0"
   dependencies:
-    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-30ccb7b4-91b3-41a8-9fba-7b90ec1f73e1-1726467494316/node_modules/@aztec/aztec.js"
-    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-30ccb7b4-91b3-41a8-9fba-7b90ec1f73e1-1726467494316/node_modules/@aztec/circuit-types"
-    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-30ccb7b4-91b3-41a8-9fba-7b90ec1f73e1-1726467494316/node_modules/@aztec/circuits.js"
-    "@aztec/entrypoints" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-30ccb7b4-91b3-41a8-9fba-7b90ec1f73e1-1726467494316/node_modules/@aztec/entrypoints"
+    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-19ef4e96-b879-4219-b034-b59fc506f534-1726475905138/node_modules/@aztec/aztec.js"
+    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-19ef4e96-b879-4219-b034-b59fc506f534-1726475905138/node_modules/@aztec/circuit-types"
+    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-19ef4e96-b879-4219-b034-b59fc506f534-1726475905138/node_modules/@aztec/circuits.js"
+    "@aztec/entrypoints" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-19ef4e96-b879-4219-b034-b59fc506f534-1726475905138/node_modules/@aztec/entrypoints"
     "@aztec/ethereum" "0.46.1"
-    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-30ccb7b4-91b3-41a8-9fba-7b90ec1f73e1-1726467494316/node_modules/@aztec/foundation"
+    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-accounts-0.1.0-19ef4e96-b879-4219-b034-b59fc506f534-1726475905138/node_modules/@aztec/foundation"
+    "@aztec/types" "0.46.1"
+    tslib "^2.4.0"
+
+"@aztec/aztec.js@0.46.1":
+  version "0.46.1"
+  resolved "https://registry.yarnpkg.com/@aztec/aztec.js/-/aztec.js-0.46.1.tgz#7e6c5d30c628839422e3d263e951a4d8e84beec4"
+  integrity sha512-oteghqUZTy12XHj3E9GzKiRYyDbrk9TAwuWhMzaOqN6A9UgQ07KlHhved8+VvmoYfVI0mth7qHTqfwfB7LdYvw==
+  dependencies:
+    "@aztec/circuit-types" "0.46.1"
+    "@aztec/circuits.js" "0.46.1"
+    "@aztec/ethereum" "0.46.1"
+    "@aztec/foundation" "0.46.1"
+    "@aztec/protocol-contracts" "0.46.1"
     "@aztec/types" "0.46.1"
     tslib "^2.4.0"
 
 "@aztec/aztec.js@file:../yarn-project-async/aztec.js":
   version "0.1.0"
   dependencies:
-    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-b40caa9f-3945-4371-b307-8c93b27cb25d-1726467494322/node_modules/@aztec/circuit-types"
-    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-b40caa9f-3945-4371-b307-8c93b27cb25d-1726467494322/node_modules/@aztec/circuits.js"
+    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-0b660950-8c9e-4950-9de1-87ecf71a6d74-1726475905145/node_modules/@aztec/circuit-types"
+    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-0b660950-8c9e-4950-9de1-87ecf71a6d74-1726475905145/node_modules/@aztec/circuits.js"
     "@aztec/ethereum" "0.46.1"
-    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-b40caa9f-3945-4371-b307-8c93b27cb25d-1726467494322/node_modules/@aztec/foundation"
+    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-aztec-js-0.1.0-0b660950-8c9e-4950-9de1-87ecf71a6d74-1726475905145/node_modules/@aztec/foundation"
     "@aztec/protocol-contracts" "0.46.1"
     "@aztec/types" "0.46.1"
     tslib "^2.4.0"
@@ -49,12 +62,27 @@
     react "18.2.0"
     react-native "0.74.5"
 
+"@aztec/circuit-types@0.46.1":
+  version "0.46.1"
+  resolved "https://registry.yarnpkg.com/@aztec/circuit-types/-/circuit-types-0.46.1.tgz#cb8941cef40fbe4983eaa8b1ca77ccba9baf95fb"
+  integrity sha512-KqcMOCbwr50gsQWuy2HMvTngtu/EAAUxa7vqb39G1a+mvBTsP5YIMOB1X3xeMhMyMlf+MH8iw6Q1NaTjzUgrew==
+  dependencies:
+    "@aztec/circuits.js" "0.46.1"
+    "@aztec/ethereum" "0.46.1"
+    "@aztec/foundation" "0.46.1"
+    "@aztec/types" "0.46.1"
+    browserify-cipher "^1.0.1"
+    lodash.clonedeep "^4.5.0"
+    lodash.isequal "^4.5.0"
+    lodash.times "^4.3.2"
+    tslib "^2.5.0"
+
 "@aztec/circuit-types@file:../yarn-project-async/circuit-types":
   version "0.1.0"
   dependencies:
-    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuit-types-0.1.0-fa22815f-1b4b-4c9d-8bbf-d61177666e59-1726467494293/node_modules/@aztec/circuits.js"
+    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuit-types-0.1.0-cfa9b8af-8caa-4810-bd85-47e8fd781135-1726475905092/node_modules/@aztec/circuits.js"
     "@aztec/ethereum" "0.46.1"
-    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuit-types-0.1.0-fa22815f-1b4b-4c9d-8bbf-d61177666e59-1726467494293/node_modules/@aztec/foundation"
+    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuit-types-0.1.0-cfa9b8af-8caa-4810-bd85-47e8fd781135-1726475905092/node_modules/@aztec/foundation"
     "@aztec/types" "0.46.1"
     browserify-cipher "^1.0.1"
     lodash.clonedeep "^4.5.0"
@@ -78,8 +106,8 @@
   version "0.1.0"
   dependencies:
     "@aztec/bb.js" "0.46.1"
-    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuits-js-0.1.0-35c72291-9078-4070-8ab5-0993809c3d66-1726467494329/node_modules/@aztec/foundation"
-    "@aztec/types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuits-js-0.1.0-35c72291-9078-4070-8ab5-0993809c3d66-1726467494329/node_modules/@aztec/types"
+    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuits-js-0.1.0-70c5e3c9-89d3-4abc-8953-6f95c729d839-1726475905168/node_modules/@aztec/foundation"
+    "@aztec/types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-circuits-js-0.1.0-70c5e3c9-89d3-4abc-8953-6f95c729d839-1726475905168/node_modules/@aztec/types"
     eslint "^8.35.0"
     lodash.chunk "^4.2.0"
     tslib "^2.4.0"
@@ -87,9 +115,9 @@
 "@aztec/entrypoints@file:../yarn-project-async/entrypoints":
   version "0.1.0"
   dependencies:
-    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-37215c19-58ce-40ad-a19a-069a53777c47-1726467494343/node_modules/@aztec/aztec.js"
-    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-37215c19-58ce-40ad-a19a-069a53777c47-1726467494343/node_modules/@aztec/circuit-types"
-    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-37215c19-58ce-40ad-a19a-069a53777c47-1726467494343/node_modules/@aztec/circuits.js"
+    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-755d5282-1bb7-48e8-a22b-f6c4a4e4d14c-1726475905209/node_modules/@aztec/aztec.js"
+    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-755d5282-1bb7-48e8-a22b-f6c4a4e4d14c-1726475905209/node_modules/@aztec/circuit-types"
+    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-entrypoints-0.1.0-755d5282-1bb7-48e8-a22b-f6c4a4e4d14c-1726475905209/node_modules/@aztec/circuits.js"
     "@aztec/ethereum" "0.46.1"
     "@aztec/protocol-contracts" "0.46.1"
     tslib "^2.4.0"
@@ -154,6 +182,14 @@
     sha3 "^2.1.4"
     zod "^3.22.4"
 
+"@aztec/noir-contracts.js@0.46.1":
+  version "0.46.1"
+  resolved "https://registry.yarnpkg.com/@aztec/noir-contracts.js/-/noir-contracts.js-0.46.1.tgz#a3586488f6f9bfa5ff8dc824bc9dd00f8f3e8fd8"
+  integrity sha512-vUMhmv6pIIzjfdYA5l+9CL+zfjOp2KZTCgBCm5+oIFVYoXnjTONBk6RT/ewOahG7L6Bd3TwPBdZsDQdCZAUP4A==
+  dependencies:
+    "@aztec/aztec.js" "0.46.1"
+    tslib "^2.4.0"
+
 "@aztec/protocol-contracts@0.46.1":
   version "0.46.1"
   resolved "https://registry.yarnpkg.com/@aztec/protocol-contracts/-/protocol-contracts-0.46.1.tgz#ccea8519b0819c89fc9b8581a0d116bf92de549e"
@@ -177,7 +213,7 @@
   version "0.1.0"
   dependencies:
     "@aztec/ethereum" "0.46.1"
-    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-types-0.1.0-ff1ec722-0e8a-4d2a-b3b2-a32d904024df-1726467494360/node_modules/@aztec/foundation"
+    "@aztec/foundation" "file:../../../../Library/Caches/Yarn/v6/npm-@aztec-types-0.1.0-d4a665a0-5d0f-4f81-93b5-7ab97a9f59ca-1726475905272/node_modules/@aztec/foundation"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.24.7":
   version "7.24.7"
@@ -10746,11 +10782,12 @@ react-native-level-fs@^3.0.1:
 "react-native-p256@file:./react-native-p256":
   version "0.0.1"
   dependencies:
-    "@aztec/accounts" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-6cc76709-f751-432b-9662-f7a15fcb6554-1726467494273/yarn-project-async/accounts"
-    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-6cc76709-f751-432b-9662-f7a15fcb6554-1726467494273/yarn-project-async/aztec.js"
-    "@aztec/bb.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-6cc76709-f751-432b-9662-f7a15fcb6554-1726467494273/node_modules/react-native-bb.js"
-    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-6cc76709-f751-432b-9662-f7a15fcb6554-1726467494273/yarn-project-async/circuit-types"
-    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-6cc76709-f751-432b-9662-f7a15fcb6554-1726467494273/yarn-project-async/circuits.js"
+    "@aztec/accounts" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-7d051fae-3765-4846-a42d-af81f1a7b396-1726475904838/yarn-project-async/accounts"
+    "@aztec/aztec.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-7d051fae-3765-4846-a42d-af81f1a7b396-1726475904838/yarn-project-async/aztec.js"
+    "@aztec/bb.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-7d051fae-3765-4846-a42d-af81f1a7b396-1726475904838/node_modules/react-native-bb.js"
+    "@aztec/circuit-types" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-7d051fae-3765-4846-a42d-af81f1a7b396-1726475904838/yarn-project-async/circuit-types"
+    "@aztec/circuits.js" "file:../../../../Library/Caches/Yarn/v6/npm-react-native-p256-0.0.1-7d051fae-3765-4846-a42d-af81f1a7b396-1726475904838/yarn-project-async/circuits.js"
+    "@aztec/noir-contracts.js" "0.46.1"
     "@noble/curves" "^1.4.2"
     "@react-native-async-storage/async-storage" "^1.24.0"
     ethers "^6.13.2"

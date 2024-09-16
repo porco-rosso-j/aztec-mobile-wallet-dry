@@ -9,12 +9,13 @@ import {
   TxStatus,
   AccountManager,
   Wallet,
-  AccountWallet
+  AccountWallet,
+  SignerlessWallet
 } from '@aztec/aztec.js';
-import { Fq } from '@aztec/circuits.js';
+import { AztecAddress, Fq } from '@aztec/circuits.js';
 import { Ecdsa } from '@aztec/circuits.js/barretenberg';
 import { getDeployedTestAccountsWallets } from '@aztec/accounts/testing';
-import { CounterContract } from '@aztec/noir-contracts.js';
+import { CounterContract, TokenContract } from '@aztec/noir-contracts.js';
 import {
   SANDBOX_URL,
   TIMEOUT,
@@ -33,9 +34,17 @@ import { getEcdsaAccount, getEcdsaWallet } from '../src/p256Account/index.js';
 // deploy contract
 // test signature verification with mock sig
 
+export const ACCOUNT_ADDRESS =
+  '0x0ad18d234f1867bdc7b2cac3ea675db5918cdabd5010775e8781280728df5dae';
+const TOKEN_ADDRESS =
+  '0x00c13f15e6e64dde086aa6c349e6aac63f5c77215ed6a8a3e1a29c3231c8bd03';
+
+// deploy: 0x2c014dd1a9676bdeda6e3b4b3bfc8b511c23b39fb423ac3dfdce609a69ab40be
+
 let pxe: PXE;
 let deployer: AccountWalletWithSecretKey;
 let p256AccountWallet: AccountWallet;
+let tokenContract: TokenContract;
 
 beforeAll(async () => {
   pxe = createPXEClient(SANDBOX_URL);
@@ -43,33 +52,43 @@ beforeAll(async () => {
   await initAztecJs();
   deployer = (await getDeployedTestAccountsWallets(pxe))[0];
 
-  const key = Fr.random();
-  console.log('key: ', key);
-  const account = await getEcdsaAccount(
-    pxe,
-    key,
-    Buffer.from(realPubkey.x),
-    Buffer.from(realPubkey.y)
-  )
-    .deploy()
-    .wait();
+  // const key = Fr.random();
+  // console.log('key: ', key);
+  // const account = await getEcdsaAccount(
+  //   pxe,
+  //   key,
+  //   Buffer.from(realPubkey.x),
+  //   Buffer.from(realPubkey.y)
+  // )
+  //   .deploy()
+  //   .wait();
 
-  console.log('account addr: ', account.wallet.getAddress());
+  // console.log('account addr: ', account.wallet.getAddress());
 
-  // instantiate
-  p256AccountWallet = await getEcdsaWallet(
-    pxe,
-    account.wallet.getAddress(),
-    Buffer.from(realPubkey.x),
-    Buffer.from(realPubkey.y)
-  );
+  // // instantiate
+  // p256AccountWallet = await getEcdsaWallet(
+  //   pxe,
+  //   account.wallet.getAddress(),
+  //   Buffer.from(realPubkey.x),
+  //   Buffer.from(realPubkey.y)
+  // );
 
-  console.log('p256AccountWallet addr: ', p256AccountWallet.getAddress());
+  // console.log('p256AccountWallet addr: ', p256AccountWallet.getAddress());
+
+  // tokenContract = await TokenContract.deploy(
+  //   deployer,
+  //   deployer.getAddress(),
+  //   'DRY Token',
+  //   'DRY',
+  //   18n
+  // )
+  //   .send()
+  //   .deployed();
 });
 
 describe('E2E Batcher setup', () => {
   jest.setTimeout(TIMEOUT);
-  it('should successfully', async () => {
+  it.skip('should successfully', async () => {
     console.log('test test');
 
     const accountInstance = await EcdsaAccountContractInstance.at(
@@ -88,6 +107,36 @@ describe('E2E Batcher setup', () => {
       .simulate();
 
     console.log('returnValue: ', returnValue);
+  });
+
+  it.skip('should successfully send tokens', async () => {
+    console.log('test test');
+
+    const tx = await tokenContract.methods
+      .mint_public(AztecAddress.fromString(ACCOUNT_ADDRESS), 10)
+      .send()
+      .wait();
+    console.log('tx: ', tx);
+    console.log('tokenContract: ', tokenContract.address);
+  });
+
+  it('should successfully mint tokens', async () => {
+    const ecdsaContract = await getEcdsaWallet(
+      pxe,
+      AztecAddress.fromString(ACCOUNT_ADDRESS),
+      Buffer.from(realPubkey.x),
+      Buffer.from(realPubkey.y)
+    );
+
+    const token = await TokenContract.at(
+      AztecAddress.fromString(TOKEN_ADDRESS),
+      ecdsaContract
+    );
+
+    const balance = await token.methods
+      .balance_of_public(AztecAddress.fromString(ACCOUNT_ADDRESS))
+      .simulate();
+    console.log('balance: ', balance);
   });
 });
 

@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 // import Button from '../components/Button';
 import { useNavigation } from '@react-navigation/native';
 // import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import constants from '../constants';
+import constants, { SANDBOX_URL } from '../constants';
 import { formatAddress } from '../scripts';
 import IconButton from '../components/IconButton';
 import { format, set } from 'date-fns';
@@ -17,6 +17,12 @@ import {
   RefreshCcw
 } from '@tamagui/lucide-icons';
 import { useBalance } from '../hooks/useBalance';
+import {   
+  getPublicKey,
+  aztecJs, 
+  getEcdsaWallet,  
+  sendTokenPublic
+} from 'react-native-p256';
 
 const SAFE_ADDRESS = '0x1234567890abcdef1234567890abcdef12345678';
 const RECIPIENT_ADDRESS = '0xaabbccddeeff00112233445566778899aabbccdd';
@@ -173,10 +179,30 @@ export default function Home() {
   const navigation = useNavigation();
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const [address, setAddress] = useState<string>("0x14f7a3f6de857d54350353673d1a0f76afc35bd06e22079bc44a8c9fe61cf51e");
-  const [token, setToken] = useState<string>("0x2128bcf18385b4faf1fa7873521e4a0a3ef8dd8c8f4bb6432704ce1e43ee3f66");
-  const { balance } = useBalance(address, token);
+  const [address, setAddress] = useState<string>("0x0ad18d234f1867bdc7b2cac3ea675db5918cdabd5010775e8781280728df5dae");
+  const [token, setToken] = useState<string>("0x00c13f15e6e64dde086aa6c349e6aac63f5c77215ed6a8a3e1a29c3231c8bd03");
+  const [account, setAccount] = useState<aztecJs.AccountWallet>();
+  const { balance } = useBalance(token, account);
   console.log('balance: ', balance);
+  console.log('account: ', account);
+
+  useEffect(() => {
+    const setup = async () => {
+      const pubkey = await getPublicKey();
+      console.log("pubkey: ", pubkey);
+
+      const account = await getEcdsaWallet(
+        aztecJs.createPXEClient(SANDBOX_URL),
+        aztecJs.AztecAddress.fromString(address),
+        Buffer.from(pubkey.x),
+        Buffer.from(pubkey.y)
+      );
+      setAccount(account);
+    };
+    if (address && !account) {
+      setup();
+    }
+  }, [address,account]);
 
   const onRefresh = async () => {};
 
@@ -233,7 +259,7 @@ export default function Home() {
                 color: 'white'
               }}
             >
-              {numeral(balance[0]).format('0,0.00')} ETH
+              {numeral(balance).format('0,0.00')} ETH
             </Text>
           )}
           {!loggedIn && (

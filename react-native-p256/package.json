@@ -16,7 +16,8 @@
         "@aztec/entrypoints": "file:../../yarn-project-async/entrypoints",
         "@aztec/types": "file:../../yarn-project-async/types",
         "@aztec/bb.js": "file:../react-native-bb.js",
-        "@aztec/foundation": "file:../../yarn-project-async/foundation"
+        "@aztec/foundation": "file:../../yarn-project-async/foundation",
+        "@aztec/aztec.js": "file:../../yarn-project-async/aztec.js"
     },
     "dependencies": {
         "@aztec/accounts": "file:../../yarn-project-async/accounts",
@@ -24,6 +25,7 @@
         "@aztec/bb.js": "file:../react-native-bb.js",
         "@aztec/circuit-types": "file:../../yarn-project-async/circuit-types",
         "@aztec/circuits.js": "file:../../yarn-project-async/circuits.js",
+        "@aztec/noir-contracts.js": "0.46.1",
         "@noble/curves": "^1.4.2",
         "@react-native-async-storage/async-storage": "^1.24.0",
         "ethers": "^6.13.2",
