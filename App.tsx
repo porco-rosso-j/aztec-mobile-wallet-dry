@@ -7,7 +7,6 @@ import Home from './src/pages/home';
 import Send from './src/pages/send';
 import Currencies from './src/pages/currencies';
 import Receive from './src/pages/receive';
-import Mock from './src/pages/mock';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,12 +26,9 @@ const App = () => {
           <Stack.Screen name="Currencies" component={Currencies} />
           <Stack.Screen name="Send" component={Send} />
           <Stack.Screen name="Receive" component={Receive} />
-          <Stack.Screen name="Mock" component={Mock} />
         </Stack.Navigator>
       </NavigationContainer>
     </TamaguiProvider>
-    // <Mock />
-    // 'yeeee'
   );
 };
 

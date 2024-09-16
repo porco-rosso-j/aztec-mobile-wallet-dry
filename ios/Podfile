@@ -26,11 +26,12 @@ prepare_react_native_project!
 # flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 # flipper_config = FlipperConfiguration.disabled
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
+# linkage = ENV['USE_FRAMEWORKS']
+# if linkage != nil
+#   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+#   use_frameworks! :linkage => linkage.to_sym # :static ?
+# end
+use_frameworks! :linkage => :static
 
 target 'ReactNativeStarter' do
   config = use_native_modules!
@@ -38,6 +39,8 @@ target 'ReactNativeStarter' do
   # pod 'react-native-bb.js', :path => '../node_modules/@aztec/bb.js/ios', :modular_headers => true
   # above might not be working as swift codes disappear from node_modules
   # pod 'react-native-bb.js', :path => '../react-native-bb.js/ios', :modular_headers => true
+
+  # pod 'BBSwift' , :path =>'../react-native-bb.js/ios/BBSwift'
 
   use_react_native!(
     :path => config[:reactNativePath],

@@ -203,7 +203,7 @@ export default function Home() {
   return (
     <MainLayout
       statusBarStyle="light-content"
-      statusBarBackgroundColor="#1F2937"
+      statusBarBackgroundColor="#150f2d"
     >
       <View style={{}}>
         <View
@@ -211,7 +211,7 @@ export default function Home() {
             paddingHorizontal: 20,
             paddingVertical: 30,
             // Dark blue gray
-            backgroundColor: '#1F2937',
+            backgroundColor: '#150f2d',
             paddingBottom: 50
           }}
         >
@@ -263,7 +263,7 @@ export default function Home() {
             >
               <IconButton
                 onPress={() => {
-                  navigation.navigate('Networks' as never);
+                  navigation.navigate('Currencies' as never);
                 }}
                 disabled={!loggedIn}
                 theme="main"
@@ -445,70 +445,4 @@ export default function Home() {
       </View>
     </MainLayout>
   );
-  //   return (
-  //     <MainLayout>
-  //       <Text
-  //         style={{
-  //           fontSize: 16,
-  //           fontWeight: '500',
-  //           marginBottom: 20,
-  //           textAlign: 'center',
-  //           color: '#6B7280'
-  //         }}
-  //       >
-  //         This application shows you how to use Noir to generate ZK proofs
-  //         natively in iOS and Android with React Native.{'\n\n'}
-  //         Click on the button below to try out the demo and generate your first ZK
-  //         proof straight from your phone!
-  //       </Text>
-  //       <View
-  //         style={{
-  //           gap: 20
-  //         }}
-  //       >
-  //         {/* <Button
-  //           onPress={() => {
-  //             // navigation.navigate('ProductProof');
-  //           }}
-  //         >
-  //           <Text
-  //             style={{
-  //               color: 'white',
-  //               fontWeight: '700',
-  //             }}
-  //           >
-  //             Proof of product
-  //           </Text>
-  //         </Button> */}
-  //         <Button
-  //           onPress={() => {
-  //             navigation.navigate('PedersenProof' as never);
-  //           }}
-  //         >
-  //           <Text
-  //             style={{
-  //               color: 'white',
-  //               fontWeight: '700'
-  //             }}
-  //           >
-  //             Proof of Pedersen Hash
-  //           </Text>
-  //         </Button>
-  //         {/* <Button
-  //           onPress={() => {
-  //             // navigation.navigate('Secp256r1Proof');
-  //           }}
-  //         >
-  //           <Text
-  //             style={{
-  //               color: 'white',
-  //               fontWeight: '700',
-  //             }}
-  //           >
-  //             Proof of secp256r1
-  //           </Text>
-  //         </Button> */}
-  //       </View>
-  //     </MainLayout>
-  //   );
 }

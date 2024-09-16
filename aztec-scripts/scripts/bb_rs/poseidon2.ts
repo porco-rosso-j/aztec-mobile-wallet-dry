@@ -21,6 +21,8 @@ async function poseidon2HashTest() {
   console.log('result u8 array: ', new Uint8Array(result.toBuffer()));
 }
 
+poseidon2HashTest();
+
 async function poseidon2PermutationTest() {
   const input = new Fr(
     Buffer.from([
@@ -46,8 +48,8 @@ async function poseidon2PermutationTest() {
   console.log('concated_result: ', concated_result);
 }
 
-// poseidon2HashTest();
-poseidon2PermutationTest();
+
+// poseidon2PermutationTest();
 
 
 async function poseidon2Permutation(input: Fieldable[]):Promise<Fr[]> {
