@@ -3,7 +3,7 @@
 
 https://github.com/user-attachments/assets/17cce2bd-515e-4446-9266-5493cce65450
 
-Dry{Aztec} is a mobile wallet on Aztec Network that allows users to control their wallet with Face ID/Fingerprint tapping into the iPhone’s Secure Enclave. It lets them privately hold, send, and receive assets and interact with privacy-preserving applications. 
+Dry{Aztec} is a mobile wallet on Aztec Network that allows users to control their wallet with Face ID/Fingerprint-based keypair secured by the iPhone’s Secure Enclave. It lets them privately hold, send, and receive assets and interact with privacy-preserving applications.
 
 This wallet is tailored for natively working in the mobile environment. Unlike browser-based Aztec wallets, it executes Barretenberg’s cryptographic computations natively on mobile instead of relying on wasm.
 
