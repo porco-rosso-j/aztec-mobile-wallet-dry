@@ -1,4 +1,4 @@
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 import constants from '../constants';
 
 export const sendTx = (proof: string, pubKeyHash: string, value: number) => {
@@ -12,7 +12,7 @@ export const sendTx = (proof: string, pubKeyHash: string, value: number) => {
     proof: proof,
     txData: {
       to: '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
-      value: ethers.parseEther(value.toString()),
+      value: '0',
       data: '0x00'
     }
   };

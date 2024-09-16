@@ -1,20 +1,15 @@
 module.exports = {
-  presets: [
-    '@babel/preset-env',
-    '@babel/preset-react',
-    'module:@react-native/babel-preset'
-    // [
-    //   'module:@react-native/babel-preset',
-    //   {
-    //     targets: {
-    //       modules: false,
-    //       node: 'current' // This is just an example, adjust if needed
-    //     }
-    //   }
-    // ]
-  ],
+  presets: ['module:metro-react-native-babel-preset'],
   plugins: [
-    '@babel/plugin-transform-modules-commonjs',
-    '@babel/plugin-syntax-dynamic-import' // Needed for dynamic import syntax
+    [
+      '@babel/plugin-syntax-import-attributes',
+      {
+        deprecatedAssertSyntax: true,
+        loose: true
+      }
+    ],
+    './babel-plugin-replace-import-meta',
+    ['@babel/plugin-syntax-top-level-await', { loose: true }],
+    ['@babel/plugin-transform-private-methods', { loose: true }]
   ]
 };

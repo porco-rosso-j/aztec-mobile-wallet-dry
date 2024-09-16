@@ -6,28 +6,24 @@ const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
  *
  * @type {import('metro-config').MetroConfig}
  */
+
 const config = {
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true
+      }
+    })
+  },
   resolver: {
-    // Aliases or redirects to help Metro resolve paths correctly
-    // resolveRequest: (context, realModuleName, platform, moduleName) => {
-    //   if (moduleName === '@aztec/aztec.js') {
-    //     // Redirect the main import to a specific path
-    //     return {
-    //       filePath: path.resolve(
-    //         __dirname,
-    //         'node_modules/@aztec/aztec.js/dest/index.js'
-    //       )
-    //     };
-    //   }
-    //   // For all other modules, use the default resolver
-    //   return context.resolveRequest(
-    //     context,
-    //     realModuleName,
-    //     platform,
-    //     moduleName
-    //   );
-    // }
-    // https://github.com/leegeunhyeok/react-native-esbuild/tree/main/example
+    unstable_enablePackageExports: true,
+    resolveRequest: require('./metro.resolver'),
+
+    extraNodeModules: {
+      ...require('node-libs-react-native')
+    },
+    sourceExts: ['jsx', 'js', 'ts', 'tsx', 'json'] // Add other extensions if needed
   }
 };
 

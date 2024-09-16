@@ -23,7 +23,7 @@
     "tsconfig": "./tsconfig.json"
   },
   "scripts": {
-    "build": "yarn clean && yarn generate && tsc -b && babel dist -d dist --extensions \".js\"",
+    "build": "yarn clean && yarn generate && tsc -b && babel dest -d dest --extensions \".js\"",
     "generate": "yarn generate:noir-contracts",
     "generate:noir-contracts": "./scripts/copy-contracts.sh",
     "build:dev": "tsc -b --watch",

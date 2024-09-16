@@ -6,7 +6,7 @@
       "forceConsistentCasingInFileNames": true,
       "allowJs": true,
       "module": "ESNext",
-      "moduleResolution": "Node",
+      "moduleResolution": "Bundler",
       "target": "ESNext",
       "useUnknownInCatchVariables": false,
       "sourceMap": true,
@@ -17,10 +17,10 @@
       "resolveJsonModule": true,
       "baseUrl": "./",
       "experimentalDecorators": true,
-      "rootDir": "src",
+      "rootDir": "./",
       "outDir": "./dist"
     },
-    "include": ["src", "src/**/*.json"],
+    "include": ["src", "src/**/*.json", "test"],
     "exclude": ["node_modules", "dist", "trash"],
     "ts-node": {
         "transpileOnly": true,

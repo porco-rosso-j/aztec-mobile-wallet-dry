@@ -4,23 +4,28 @@ import {Alert, Text, TextInput, View} from 'react-native';
 import MainLayout from '../layouts/MainLayout';
 import Button from '../components/Button';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import constants from '../constants';
+import constants, { ACCOUNT_ADDRESS, SANDBOX_URL } from '../constants';
 import IconButton from '../components/IconButton';
 import {ArrowLeft} from '@tamagui/lucide-icons';
-// import {signMessage} from '../scripts/secure-enclave';
-import {bytesToHex} from '../scripts';
-// import {getProof} from '../lib/tree';
-import {sendTx} from '../scripts/tx';
+import {   
+  getPublicKey,
+  aztecJs, 
+  getEcdsaWallet,  
+  sendTokenPublic
+} from 'react-native-p256';
+
+const TOKEN_ADDRESS = '0x00c13f15e6e64dde086aa6c349e6aac63f5c77215ed6a8a3e1a29c3231c8bd03';
 
 export default function Send() {
   const navigation = useNavigation();
   const [amount, setAmount] = useState<string>();
   const [address, setAddress] = useState<string>();
-  const [generatingProof, setGeneratingProof] = useState(false);
+  const [loading, setLoading] = useState(false);
   const route = useRoute();
 
   const onConfirm = async () => {
-    setGeneratingProof(true);
+    console.log("onConfirm....")
+    setLoading(true);
     try {
       if (!amount) {
         Alert.alert('Please enter an amount');
@@ -32,19 +37,81 @@ export default function Send() {
       }
     } catch (error) {
       console.log(error);
-}
-      // await signMessage("I'm sending money");
+    }
 
-    //   const {_proof, pubKeyHash} = await getProof();
-    //   sendTx(
-    //     _proof,
-    //     bytesToHex(Array.from(pubKeyHash)),
-    //     Number(amount?.replace(',', '.') || 0),
-    //   );
-    //   navigation.navigate('Home');
-    // } catch (error) {
-    //   console.log(error);
-    //setGeneratingProof(false);
+    try {
+
+        const pxe = aztecJs.createPXEClient(SANDBOX_URL);
+        console.log("pxe: ", pxe);
+    
+        const pubkey = await getPublicKey();
+        console.log("pubkey: ", pubkey);
+        const ecdsaContract = await getEcdsaWallet(
+          pxe,
+          aztecJs.AztecAddress.fromString(ACCOUNT_ADDRESS),
+          Buffer.from(pubkey.x),
+          Buffer.from(pubkey.y)
+        );
+
+        const tx = await sendTokenPublic(TOKEN_ADDRESS, address!, Number(amount!), ecdsaContract);
+        console.log('tx: ', tx);
+
+
+        // const input = new Fr(
+        //   Buffer.from([
+        //     6, 196, 4, 126, 220, 48, 240, 65, 72, 173, 40, 101, 187, 150, 245, 115,
+        //     253, 193, 91, 5, 45, 148, 91, 74, 184, 111, 200, 144, 36, 203, 76, 229
+        //   ])
+        // );
+    
+        // const input64 = Buffer.from([
+        //     10,  20,  11, 112, 191,  28, 187, 209,
+        //     16, 224, 109,  67, 220, 252,  21, 253,
+        //    197, 127, 255, 251,  40,  36, 222,  99,
+        //     58, 214, 146, 187, 154,  28, 243, 170,
+        //     29,  75,  79, 144,  90, 243, 224,
+        //     103,  12, 230,  99, 104, 113, 118,
+        //      25, 138, 105, 134, 189, 217, 252,
+        //     167, 219, 252, 232,  99, 176, 187,
+        //      16, 237, 187,  75
+        //   ]);
+    
+        //   const scalar = Buffer.from([
+        //       38, 209, 203, 129,  53,  25, 228, 154,
+        //       86, 202, 221, 170,   4, 204,  73, 124,
+        //       76, 104, 130,  60, 211, 101, 127, 187,
+        //       70, 204,  95, 191, 132, 198, 207,  36        
+        //   ]);
+      
+        // console.log("ecdsaContract: ", ecdsaContract);
+        // const message = "I'm sending money";
+    
+        // const sig = await signMessage(message);
+        // console.log("sig: ", sig);
+    
+        // const accountInstance = await EcdsaAccountContractInstance.at(
+        //       ecdsaContract.getAddress(),
+        //       ecdsaContract
+        // );
+    
+        // console.log("accountInstance: ", accountInstance);
+    
+        // const returnValue = await accountInstance
+        //   .methods.test_verify_signature(
+        //     await parseMessage(message),
+        //     sig,
+        //     pubkey.x,
+        //     pubkey.y
+        //   )
+        //   .simulate();
+    
+        // console.log("returnValue: ", returnValue); 
+  
+    } catch (error) {
+      console.log(error);
+    }
+
+    setLoading(false)
 };
 
 
@@ -141,7 +208,7 @@ export default function Send() {
         </Text>
         <TextInput
           placeholderTextColor={constants.lightTextColor}
-          placeholder="0x1234567890abcdef1234567890abcdef12345678"
+          placeholder="0x00d7ac035cba5a48cfc27f25071387fa9038d3edd3f2c56522287c09e386d5e2"
           value={address}
           onChangeText={text => {
             setAddress(text);
@@ -157,7 +224,7 @@ export default function Send() {
           }}
         />
         <Button
-          disabled={generatingProof}
+          disabled={loading}
           style={{
             marginTop: 20,
           }}
@@ -168,7 +235,7 @@ export default function Send() {
               fontWeight: 'bold',
               color: 'white',
             }}>
-            {generatingProof ? 'Loading...' : 'Confirm'}
+            {loading ? 'Loading...' : 'Confirm'}
           </Text>
         </Button>
       </View>

@@ -1,6 +1,6 @@
 import { type AccountWalletWithSecretKey } from '@aztec/aztec.js/wallet';
-import { type PXE } from '@aztec/circuit-types';
-import { Fr, deriveSigningKey } from '@aztec/circuits.js';
+import { type PXE } from '@aztec/circuit-types'; //
+import { Fr, deriveSigningKey } from '@aztec/circuits.js'; //
 
 import { getSchnorrAccount } from '../schnorr/index.js';
 
@@ -26,14 +26,16 @@ export function createAccount(pxe: PXE): Promise<AccountWalletWithSecretKey> {
 export async function createAccounts(
   pxe: PXE,
   numberOfAccounts = 1,
-  secrets: Fr[] = [],
+  secrets: Fr[] = []
 ): Promise<AccountWalletWithSecretKey[]> {
   const accounts = [];
 
   if (secrets.length == 0) {
     secrets = Array.from({ length: numberOfAccounts }, () => Fr.random());
   } else if (secrets.length > 0 && secrets.length !== numberOfAccounts) {
-    throw new Error('Secrets array must be empty or have the same length as the number of accounts');
+    throw new Error(
+      'Secrets array must be empty or have the same length as the number of accounts'
+    );
   }
 
   // Prepare deployments
@@ -48,8 +50,8 @@ export async function createAccounts(
         contractAddressSalt: account.salt,
         skipClassRegistration: true,
         skipPublicDeployment: true,
-        universalDeploy: true,
-      }),
+        universalDeploy: true
+      })
     );
     accounts.push(account);
   }

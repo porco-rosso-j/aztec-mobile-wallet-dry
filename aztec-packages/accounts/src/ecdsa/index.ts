@@ -6,8 +6,8 @@
  */
 import { AccountManager, type Salt } from '@aztec/aztec.js/account';
 import { type AccountWallet, getWallet } from '@aztec/aztec.js/wallet';
-import { type PXE } from '@aztec/circuit-types';
-import { type AztecAddress, type Fr } from '@aztec/circuits.js';
+import { type PXE } from '@aztec/circuit-types'; //
+import { type AztecAddress, type Fr } from '@aztec/circuits.js'; //
 
 import { EcdsaAccountContract } from './account_contract.js';
 
@@ -21,8 +21,18 @@ export { EcdsaAccountContract };
  * @param signingPrivateKey - Secp256k1 key used for signing transactions.
  * @param salt - Deployment salt.
  */
-export function getEcdsaAccount(pxe: PXE, secretKey: Fr, signingPrivateKey: Buffer, salt?: Salt): AccountManager {
-  return new AccountManager(pxe, secretKey, new EcdsaAccountContract(signingPrivateKey), salt);
+export function getEcdsaAccount(
+  pxe: PXE,
+  secretKey: Fr,
+  signingPrivateKey: Buffer,
+  salt?: Salt
+): AccountManager {
+  return new AccountManager(
+    pxe,
+    secretKey,
+    new EcdsaAccountContract(signingPrivateKey),
+    salt
+  );
 }
 
 /**
@@ -32,6 +42,10 @@ export function getEcdsaAccount(pxe: PXE, secretKey: Fr, signingPrivateKey: Buff
  * @param signingPrivateKey - ECDSA key used for signing transactions.
  * @returns A wallet for this account that can be used to interact with a contract instance.
  */
-export function getEcdsaWallet(pxe: PXE, address: AztecAddress, signingPrivateKey: Buffer): Promise<AccountWallet> {
+export function getEcdsaWallet(
+  pxe: PXE,
+  address: AztecAddress,
+  signingPrivateKey: Buffer
+): Promise<AccountWallet> {
   return getWallet(pxe, address, new EcdsaAccountContract(signingPrivateKey));
 }

@@ -1,6 +1,23 @@
 const ALCHEMY_API_KEY = 'JG3mOl7GCd3oU_skAHEpl7qWDsoyitZA';
 const PLACEHOLDER_ADDRESS = `0x4d8152386Ce4aC935d8Cfed93Ae06077025eAd9E`;
 
+export const SANDBOX_URL = 'http://localhost:8080';
+export const ACCOUNT_ADDRESS =
+  '0x0ad18d234f1867bdc7b2cac3ea675db5918cdabd5010775e8781280728df5dae';
+export const ACCOUNT_KEY =
+  '0x1b0b80f4e87390a5435ae2f1025c0518771eb676db3d9039a60b1ee845deda23';
+
+export const ACCOUNT_SIGNING_PUBKEY = {
+  x: [
+    52, 239, 213, 45, 52, 83, 239, 207, 179, 149, 217, 180, 131, 214, 182, 193,
+    0, 216, 89, 210, 83, 53, 20, 128, 155, 155, 154, 119, 238, 214, 46, 9
+  ],
+  y: [
+    4, 172, 177, 208, 40, 154, 229, 243, 155, 90, 37, 3, 234, 41, 37, 239, 162,
+    191, 143, 87, 145, 104, 9, 224, 98, 215, 221, 252, 157, 190, 162, 188
+  ]
+};
+
 export default {
   primaryColor: '#1F2937',
   // Light blue gray

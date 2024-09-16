@@ -19,18 +19,15 @@ const CURRENCIES = [
   {
     image: require('../../assets/images/chains/ethereum.png'),
     name: 'ETH',
-    networks: ['Aztec'],
   },
   {
     image: require('../../assets/images/currencies/usdc.png'),
     name: 'USDC',
-    networks: ['Aztec'],
   },
 ];
 
 function Currency({image, name}: {image: ImageSourcePropType; name: string}) {
   const navigation = useNavigation();
-  const route = useRoute();
 
   return (
     <TouchableOpacity
@@ -121,9 +118,7 @@ export default function Currencies() {
           borderTopRightRadius: 20,
           marginTop: -20,
         }}>
-        {CURRENCIES.filter(x =>
-          x.networks.includes((route.params as any)?.network),
-        ).map((currency, index) => (
+        {CURRENCIES.map((currency, index) => (
           <Currency key={index} {...currency} />
         ))}
       </View>

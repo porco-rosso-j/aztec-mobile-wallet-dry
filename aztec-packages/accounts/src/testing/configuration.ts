@@ -1,6 +1,6 @@
-import { generatePublicKey } from '@aztec/aztec.js';
+import { generatePublicKey } from '@aztec/aztec.js'; // 
 import { type AccountWalletWithSecretKey } from '@aztec/aztec.js/wallet';
-import { type PXE } from '@aztec/circuit-types';
+import { type PXE } from '@aztec/circuit-types'; // 
 import { deriveMasterIncomingViewingSecretKey, deriveSigningKey } from '@aztec/circuits.js/keys';
 import { Fr } from '@aztec/foundation/fields';
 
