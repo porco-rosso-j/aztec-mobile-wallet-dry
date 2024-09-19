@@ -182,15 +182,12 @@ export default function Home() {
   const [address, setAddress] = useState<string>(ACCOUNT_ADDRESS);
   const [token, setToken] = useState<string>(TOKEN_ADDRESS);
   const [account, setAccount] = useState<aztecJs.AccountWallet>();
-  const { balance } = useBalance(token, account);
+  const { balance, updateBalance } = useBalance(token, account);
   console.log('balance: ', balance);
   console.log('account: ', account);
 
   useEffect(() => {
     const setup = async () => {
-      const pubkey = await getPublicKey();
-      console.log("pubkey: ", pubkey);
-
       const account = await getEcdsaWallet(
         aztecJs.createPXEClient(SANDBOX_URL),
         aztecJs.AztecAddress.fromString(address),
@@ -204,7 +201,9 @@ export default function Home() {
     }
   }, [address,account]);
 
-  const onRefresh = async () => {};
+  const onRefresh = async () => {
+    updateBalance();
+  };
 
   const logIn = async () => {
     if (loggedIn) {

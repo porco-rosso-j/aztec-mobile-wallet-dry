@@ -23,21 +23,29 @@ export const useBalance = (
   token: string,
   account: aztecJs.AccountWallet | undefined
 ) => {
-  const [balance, setBalance] = useState<number>();
+  const [balance, setBalance] = useState<number>(0);
   // console.log('NativeModules in useBalance: ', NativeModules);
   // console.log('BBSwiftModule in useBalance: ', BBSwiftModule);
 
   useEffect(() => {
     const _getBalance = async () => {
-      if (!account) {
+      if (!account || balance !== 0) {
         return;
       }
-      const balance = await getBalance(token, account);
-      console.log('balance: ', balance);
-      setBalance(balance);
+      const _balance = await getBalance(token, account);
+      console.log('balance: ', _balance);
+      setBalance(_balance);
     };
     _getBalance();
-  }, [account]);
+  }, [account, balance]);
+
+  const updateBalance = async () => {
+    if (!account) {
+      return;
+    }
+    const _balance = await getBalance(token, account);
+    setBalance(_balance);
+  };
 
   // useEffect(() => {
   //   console.log('useEffect pedersenCommit');
@@ -109,6 +117,7 @@ export const useBalance = (
   // }, []);
 
   return {
-    balance
+    balance,
+    updateBalance
   };
 };
