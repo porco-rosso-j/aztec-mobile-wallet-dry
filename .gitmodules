@@ -7,3 +7,6 @@
 [submodule "yarn-project-async"]
 	path = yarn-project-async
 	url = https://github.com/porco-rosso-j/yarn-project-async
+[submodule "react-native-aztec-p256"]
+	path = react-native-aztec-p256
+	url = https://github.com/porco-rosso-j/react-native-aztec-p256
