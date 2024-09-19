@@ -1,0 +1,1121 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* ReactNativeStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */; };
+		02DE8F27BDB848F0A4C304F1 /* arrow-back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1084C39D03F34392826A7D60 /* arrow-back@3x.png */; };
+		05D72BD2408F4C17B2F46AC8 /* nike2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34493CAB4C24424DB6917A3D /* nike2.jpg */; };
+		07FCBCBB1B310438A95516F2 /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EDA4CEF36700FE0DE3622F /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework */; };
+		0E8582E5DFBF46129B798F1C /* arrow-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCE5F690C4A47D7BB477ECE /* arrow-back@2x.png */; };
+		0F186760004F4CC2B30834C9 /* pages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A16ADF73CE5473FAD0C96AB /* pages@2x.png */; };
+		1363E609E0E84B9DAEBC0734 /* grids@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59382657EA02401DA1659FAC /* grids@2x.png */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14CFCC20E26144F1A3B9259B /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB918D77A27046F9A9B8BD5D /* home@2x.png */; };
+		168717C83FF742E5B5A8F76D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAABEB7816C4E3289CF9611 /* logo.png */; };
+		1A06C96640254F74A1DFD8CD /* components@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FD0DAE9F2047F0935952F5 /* components@2x.png */; };
+		2332A2A3F7F04DA5B9363813 /* pages@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55C8220A8704C028938DAE0 /* pages@3x.png */; };
+		264AED9034754A86AD93A27F /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 7058CC38DD3B49B6814581EE /* phone.png */; };
+		2C1D2930E9DF48F5BEAEE023 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 913D7DB9494B4F6296B493DC /* home.png */; };
+		2C8EC24BF13547ACA7A37DB7 /* grids.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAC5016C39D4C1CB24ED1F1 /* grids.png */; };
+		2D3344619F4046D2850A342B /* blog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA2A8C7D90B4ABD8CD863EB /* blog.png */; };
+		2F3F07424BD249AA83132498 /* arrow-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B423F2C4BD6467D800DB732 /* arrow-back.png */; };
+		34A28BFB7DFA45FE96664CE9 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBB5FEF6595044A0A5C7C669 /* Lato-Semibold.ttf */; };
+		46DEE6A1191A4B3088CB5EB9 /* user_min.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA5D1B286C4D46AEAA4472 /* user_min.png */; };
+		497420B2FDEF4587982659D8 /* components.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A2EE5BE7B4D7890A5698F /* components.png */; };
+		4DDC985649744CB898088650 /* topBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F1978E1F94494866E1438 /* topBarBg.png */; };
+		536928F37AB94B67873529D8 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C77CA21D5142068F498BB8 /* user.png */; };
+		542480742C9BE9D400CC7369 /* BBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 542480732C9BE9D400CC7369 /* BBSwift */; };
+		54355D272C95B72000CB8B0E /* BBSwiftModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54355D262C95B72000CB8B0E /* BBSwiftModule.m */; };
+		54757C712C965837007A6D5D /* GenericPasswordConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6C2C965837007A6D5D /* GenericPasswordConvertible.swift */; };
+		54757C722C965837007A6D5D /* KeyStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6D2C965837007A6D5D /* KeyStoreError.swift */; };
+		54757C732C965837007A6D5D /* GenericPasswordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6E2C965837007A6D5D /* GenericPasswordStore.swift */; };
+		54757C742C965837007A6D5D /* EnclaveModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6F2C965837007A6D5D /* EnclaveModule.swift */; };
+		54757C752C965837007A6D5D /* EnclaveModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54757C702C965837007A6D5D /* EnclaveModule.m */; };
+		54B1CF4C2C96671200BBC8AD /* SecureEnclaveModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1CF4A2C96671200BBC8AD /* SecureEnclaveModule.swift */; };
+		54B1CF4D2C96671200BBC8AD /* SecureEnclaveModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1CF4B2C96671200BBC8AD /* SecureEnclaveModule.m */; };
+		54B944842C9591D80016C114 /* BBSwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B944822C9591D80016C114 /* BBSwiftModule.swift */; };
+		56F1AECF95304EC38DACE42F /* RNS_nerd.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F7907D7964EC69FA7E39D /* RNS_nerd.png */; };
+		5D7B9D0FB19A479ABF871254 /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = F646A091A4F2473CB98B38A5 /* chart.png */; };
+		65B7B53583794F7686894C9E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDA1B30D3A40BEAF01E922 /* background.png */; };
+		67BE9212F1A44A4D8DB1C0AE /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01D826C7EEB1486FB4171CAE /* Lato-BoldItalic.ttf */; };
+		6A3FFC6B41244C2782565F2D /* nike1.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A564AB6B7A4E228D2D26E5 /* nike1.png */; };
+		6F87DA8BE07C4C24AE20DA95 /* components@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B68A6E24FB24601B641EA5D /* components@3x.png */; };
+		717FD7264ABB4981AE22E231 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = D517465BCC4F449BBC0F8C2D /* profile.png */; };
+		78D5921E70594C578DFE86FB /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9769C55705F94CF0A7AD3196 /* avatar.png */; };
+		810C0042B05F4A2098849D50 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10828D039753419CB8E236AC /* Lato-Italic.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		87B3B70CB29246AFA6C46F5C /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 831D71E350494E8DA3DE09B1 /* Lato-Thin.ttf */; };
+		8955C32B54C8BF68A34A5D32 /* Pods_ReactNativeStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75A4179C17DF7B128141DFD /* Pods_ReactNativeStarter.framework */; };
+		93F37530BC5441EA8961411D /* pages.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C362EA21EA343A69EF9A268 /* pages.png */; };
+		996AFAC1B7CF4B76A2BCD4AA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1631118B349D42F6BF60EDEF /* Lato-Bold.ttf */; };
+		9BA6AD3BF1DB4FD28DFD0B63 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31EA6D00E19D4ECBBC119ECD /* Lato-LightItalic.ttf */; };
+		9BDFB352F004468FBBF9BFFA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F873D3C2C44D9F9DF9CC25 /* Lato-Regular.ttf */; };
+		9D4BF175705845AC8B4F0B7A /* projects.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D4161327BC42D4883190FC /* projects.jpg */; };
+		9EF39E1A94834A46A675A475 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D781225C403845E2A428C70C /* camera.png */; };
+		A171D493247849FE8385D2B1 /* calendar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A4E69517654C9A865233CB /* calendar@3x.png */; };
+		A8E61F945B6943C0A8065ED7 /* white-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6882C41BBEF4726A44A0D05 /* white-logo.png */; };
+		AE58B366B50E4BEFA637FD30 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A40D54BB624D0399FBBF45 /* Lato-Medium.ttf */; };
+		AEFDFFA38F9D47EF98C3D9CC /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF5EC97581441148824B0AD /* gallery.png */; };
+		B2C5661A435E47E68E8DB6EC /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6A4EDC3F8545BBAE7F2BCF /* login.png */; };
+		B9A2416AB0E88286CA7CE5B0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7920FE3FEA3F5C7EE2400482 /* PrivacyInfo.xcprivacy */; };
+		C69E8E984A08448DA67A6836 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74092E87717049368BAA0D61 /* icon.png */; };
+		C8F3653B06B64516A821BD4F /* grids@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1DC3F2FFE34418B7908DE8 /* grids@3x.png */; };
+		CA6564BCDFAA43B08B89D3CD /* social.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7C99956CFE8541CE91CCE0BB /* social.jpeg */; };
+		CBA0BC10DBCF4399802350A4 /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = C8BFB45C9A3646638D022748 /* default-avatar.png */; };
+		CBEBC232B9B149779982D1AA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = C11249B905EF47A7A54F45E1 /* settings.png */; };
+		CBEF3A97BBFD4109B4EA4F45 /* photos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 91C29545EFA34B3D845D2008 /* photos.jpeg */; };
+		D1DE63D7040D4F9C8D66C228 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 261F34F4D18A4A0DB5FBB4C3 /* facebook.png */; };
+		D8F0B07A7C3B495AAD958F34 /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B60857CACA1431A819FB23D /* calendar@2x.png */; };
+		DE9266C7BE7F44E0A64937E6 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4549596E034D44FE8BE61BFC /* home@3x.png */; };
+		E070404DA3E0495991EEE6BA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F2487BCC325246F6B1CFB081 /* menu.png */; };
+		E8DFE64FB53C4B988C4073C6 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 890114884A064198B984B994 /* chat.png */; };
+		F003118D05944762A277801F /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CC9E1501934B8F9F55A2F9 /* twitter.png */; };
+		F0FAC7E95860406BA79412C1 /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 197789EF933345B2B6D78323 /* arrow-left.png */; };
+		F33C0CE983C3413786EFED54 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8B94D7CAE0417282FBDFA0 /* calendar.png */; };
+		F8C4F36B7494499E885C04D7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D0F0C5021B4A8089136412 /* Lato-Light.ttf */; };
+		FFB58DD1F2C548DBA6239392 /* google-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFE40444D04E11A3A3D39D /* google-plus.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = ReactNativeStarter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeStarterTests.m; sourceTree = "<group>"; };
+		01D826C7EEB1486FB4171CAE /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0ADDA1B30D3A40BEAF01E922 /* background.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = background.png; path = ../assets/images/background.png; sourceTree = "<group>"; };
+		0E8B94D7CAE0417282FBDFA0 /* calendar.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = calendar.png; path = ../assets/images/drawer/calendar.png; sourceTree = "<group>"; };
+		10828D039753419CB8E236AC /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		1084C39D03F34392826A7D60 /* arrow-back@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "arrow-back@3x.png"; path = "../assets/images/icons/arrow-back@3x.png"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ReactNativeStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeStarter/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ReactNativeStarter/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeStarter/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeStarter/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeStarter/main.m; sourceTree = "<group>"; };
+		1631118B349D42F6BF60EDEF /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		197789EF933345B2B6D78323 /* arrow-left.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "arrow-left.png"; path = "../assets/images/icons/arrow-left.png"; sourceTree = "<group>"; };
+		1F8F7907D7964EC69FA7E39D /* RNS_nerd.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = RNS_nerd.png; path = ../assets/images/RNS_nerd.png; sourceTree = "<group>"; };
+		261F34F4D18A4A0DB5FBB4C3 /* facebook.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = facebook.png; path = ../assets/images/facebook.png; sourceTree = "<group>"; };
+		2B42EC2EDB4D283E1DC704AC /* Pods-ReactNativeStarter-ReactNativeStarterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarter-ReactNativeStarterTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarter-ReactNativeStarterTests/Pods-ReactNativeStarter-ReactNativeStarterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31EA6D00E19D4ECBBC119ECD /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		34493CAB4C24424DB6917A3D /* nike2.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = nike2.jpg; path = ../assets/images/nike2.jpg; sourceTree = "<group>"; };
+		36A564AB6B7A4E228D2D26E5 /* nike1.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = nike1.png; path = ../assets/images/nike1.png; sourceTree = "<group>"; };
+		3AAA5D1B286C4D46AEAA4472 /* user_min.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = user_min.png; path = ../assets/images/drawer/user_min.png; sourceTree = "<group>"; };
+		41EDA4CEF36700FE0DE3622F /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeStarter_ReactNativeStarterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4549596E034D44FE8BE61BFC /* home@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "home@3x.png"; path = "../assets/images/tabbar/home@3x.png"; sourceTree = "<group>"; };
+		4C362EA21EA343A69EF9A268 /* pages.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = pages.png; path = ../assets/images/drawer/pages.png; sourceTree = "<group>"; };
+		4CF5EC97581441148824B0AD /* gallery.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = gallery.png; path = ../assets/images/pages/gallery.png; sourceTree = "<group>"; };
+		4DCE5F690C4A47D7BB477ECE /* arrow-back@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "arrow-back@2x.png"; path = "../assets/images/icons/arrow-back@2x.png"; sourceTree = "<group>"; };
+		54355D242C95B20400CB8B0E /* ReactNativeStarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeStarter-Bridging-Header.h"; sourceTree = "<group>"; };
+		54355D262C95B72000CB8B0E /* BBSwiftModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSwiftModule.m; sourceTree = "<group>"; };
+		54757C6C2C965837007A6D5D /* GenericPasswordConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPasswordConvertible.swift; sourceTree = "<group>"; };
+		54757C6D2C965837007A6D5D /* KeyStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyStoreError.swift; sourceTree = "<group>"; };
+		54757C6E2C965837007A6D5D /* GenericPasswordStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPasswordStore.swift; sourceTree = "<group>"; };
+		54757C6F2C965837007A6D5D /* EnclaveModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnclaveModule.swift; sourceTree = "<group>"; };
+		54757C702C965837007A6D5D /* EnclaveModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnclaveModule.m; sourceTree = "<group>"; };
+		54B1CF4A2C96671200BBC8AD /* SecureEnclaveModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureEnclaveModule.swift; sourceTree = "<group>"; };
+		54B1CF4B2C96671200BBC8AD /* SecureEnclaveModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureEnclaveModule.m; sourceTree = "<group>"; };
+		54B944822C9591D80016C114 /* BBSwiftModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSwiftModule.swift; sourceTree = "<group>"; };
+		59382657EA02401DA1659FAC /* grids@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "grids@2x.png"; path = "../assets/images/tabbar/grids@2x.png"; sourceTree = "<group>"; };
+		6B423F2C4BD6467D800DB732 /* arrow-back.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "arrow-back.png"; path = "../assets/images/icons/arrow-back.png"; sourceTree = "<group>"; };
+		7058CC38DD3B49B6814581EE /* phone.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = phone.png; path = ../assets/images/phone.png; sourceTree = "<group>"; };
+		74092E87717049368BAA0D61 /* icon.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icon.png; path = ../assets/images/icon.png; sourceTree = "<group>"; };
+		7920FE3FEA3F5C7EE2400482 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeStarter/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7C99956CFE8541CE91CCE0BB /* social.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = social.jpeg; path = ../assets/images/social.jpeg; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeStarter/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		831D71E350494E8DA3DE09B1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		88CC9E1501934B8F9F55A2F9 /* twitter.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = twitter.png; path = ../assets/images/twitter.png; sourceTree = "<group>"; };
+		890114884A064198B984B994 /* chat.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = chat.png; path = ../assets/images/pages/chat.png; sourceTree = "<group>"; };
+		8A16ADF73CE5473FAD0C96AB /* pages@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "pages@2x.png"; path = "../assets/images/tabbar/pages@2x.png"; sourceTree = "<group>"; };
+		8AAABEB7816C4E3289CF9611 /* logo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = logo.png; path = ../assets/images/logo.png; sourceTree = "<group>"; };
+		8AAC5016C39D4C1CB24ED1F1 /* grids.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = grids.png; path = ../assets/images/drawer/grids.png; sourceTree = "<group>"; };
+		8B68A6E24FB24601B641EA5D /* components@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "components@3x.png"; path = "../assets/images/tabbar/components@3x.png"; sourceTree = "<group>"; };
+		8E1DC3F2FFE34418B7908DE8 /* grids@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "grids@3x.png"; path = "../assets/images/tabbar/grids@3x.png"; sourceTree = "<group>"; };
+		913D7DB9494B4F6296B493DC /* home.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = home.png; path = ../assets/images/drawer/home.png; sourceTree = "<group>"; };
+		91C29545EFA34B3D845D2008 /* photos.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = photos.jpeg; path = ../assets/images/photos.jpeg; sourceTree = "<group>"; };
+		93A40D54BB624D0399FBBF45 /* Lato-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Medium.ttf"; path = "../assets/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		94D4161327BC42D4883190FC /* projects.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = projects.jpg; path = ../assets/images/projects.jpg; sourceTree = "<group>"; };
+		9769C55705F94CF0A7AD3196 /* avatar.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = avatar.png; path = ../assets/images/avatar.png; sourceTree = "<group>"; };
+		9B60857CACA1431A819FB23D /* calendar@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "calendar@2x.png"; path = "../assets/images/tabbar/calendar@2x.png"; sourceTree = "<group>"; };
+		9CE0CE5A5E0BC2E78369F9E7 /* Pods-ReactNativeStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarter.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarter/Pods-ReactNativeStarter.release.xcconfig"; sourceTree = "<group>"; };
+		9FA2A8C7D90B4ABD8CD863EB /* blog.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = blog.png; path = ../assets/images/drawer/blog.png; sourceTree = "<group>"; };
+		A3D0F0C5021B4A8089136412 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		A75A4179C17DF7B128141DFD /* Pods_ReactNativeStarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeStarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F873D3C2C44D9F9DF9CC25 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		B43A2EE5BE7B4D7890A5698F /* components.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = components.png; path = ../assets/images/drawer/components.png; sourceTree = "<group>"; };
+		B5CFE40444D04E11A3A3D39D /* google-plus.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "google-plus.png"; path = "../assets/images/google-plus.png"; sourceTree = "<group>"; };
+		B7C77CA21D5142068F498BB8 /* user.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = user.png; path = ../assets/images/drawer/user.png; sourceTree = "<group>"; };
+		BBB5FEF6595044A0A5C7C669 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../assets/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		C11249B905EF47A7A54F45E1 /* settings.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = settings.png; path = ../assets/images/drawer/settings.png; sourceTree = "<group>"; };
+		C8BFB45C9A3646638D022748 /* default-avatar.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "default-avatar.png"; path = "../assets/images/default-avatar.png"; sourceTree = "<group>"; };
+		CA9F1978E1F94494866E1438 /* topBarBg.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = topBarBg.png; path = ../assets/images/topBarBg.png; sourceTree = "<group>"; };
+		D517465BCC4F449BBC0F8C2D /* profile.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = profile.png; path = ../assets/images/pages/profile.png; sourceTree = "<group>"; };
+		D6D6568E4736D2264A0953E4 /* Pods-ReactNativeStarter-ReactNativeStarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarter-ReactNativeStarterTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarter-ReactNativeStarterTests/Pods-ReactNativeStarter-ReactNativeStarterTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6FD0DAE9F2047F0935952F5 /* components@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "components@2x.png"; path = "../assets/images/tabbar/components@2x.png"; sourceTree = "<group>"; };
+		D781225C403845E2A428C70C /* camera.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = camera.png; path = ../assets/images/camera.png; sourceTree = "<group>"; };
+		E55C8220A8704C028938DAE0 /* pages@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "pages@3x.png"; path = "../assets/images/tabbar/pages@3x.png"; sourceTree = "<group>"; };
+		E6882C41BBEF4726A44A0D05 /* white-logo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "white-logo.png"; path = "../assets/images/white-logo.png"; sourceTree = "<group>"; };
+		E6A4E69517654C9A865233CB /* calendar@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "calendar@3x.png"; path = "../assets/images/tabbar/calendar@3x.png"; sourceTree = "<group>"; };
+		EB918D77A27046F9A9B8BD5D /* home@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "home@2x.png"; path = "../assets/images/tabbar/home@2x.png"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE6A4EDC3F8545BBAE7F2BCF /* login.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = login.png; path = ../assets/images/pages/login.png; sourceTree = "<group>"; };
+		F2487BCC325246F6B1CFB081 /* menu.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = menu.png; path = ../assets/images/drawer/menu.png; sourceTree = "<group>"; };
+		F646A091A4F2473CB98B38A5 /* chart.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = chart.png; path = ../assets/images/pages/chart.png; sourceTree = "<group>"; };
+		F9C0BCA035CF520BFE750678 /* Pods-ReactNativeStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarter.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarter/Pods-ReactNativeStarter.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FCBCBB1B310438A95516F2 /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542480742C9BE9D400CC7369 /* BBSwift in Frameworks */,
+				8955C32B54C8BF68A34A5D32 /* Pods_ReactNativeStarter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* ReactNativeStarterTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = ReactNativeStarterTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* ReactNativeStarter */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				7920FE3FEA3F5C7EE2400482 /* PrivacyInfo.xcprivacy */,
+			);
+			name = ReactNativeStarter;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				A75A4179C17DF7B128141DFD /* Pods_ReactNativeStarter.framework */,
+				41EDA4CEF36700FE0DE3622F /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FFE391FC8CA4C299D923F50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1631118B349D42F6BF60EDEF /* Lato-Bold.ttf */,
+				01D826C7EEB1486FB4171CAE /* Lato-BoldItalic.ttf */,
+				10828D039753419CB8E236AC /* Lato-Italic.ttf */,
+				A3D0F0C5021B4A8089136412 /* Lato-Light.ttf */,
+				31EA6D00E19D4ECBBC119ECD /* Lato-LightItalic.ttf */,
+				93A40D54BB624D0399FBBF45 /* Lato-Medium.ttf */,
+				A8F873D3C2C44D9F9DF9CC25 /* Lato-Regular.ttf */,
+				BBB5FEF6595044A0A5C7C669 /* Lato-Semibold.ttf */,
+				831D71E350494E8DA3DE09B1 /* Lato-Thin.ttf */,
+				1F8F7907D7964EC69FA7E39D /* RNS_nerd.png */,
+				9769C55705F94CF0A7AD3196 /* avatar.png */,
+				0ADDA1B30D3A40BEAF01E922 /* background.png */,
+				D781225C403845E2A428C70C /* camera.png */,
+				C8BFB45C9A3646638D022748 /* default-avatar.png */,
+				9FA2A8C7D90B4ABD8CD863EB /* blog.png */,
+				0E8B94D7CAE0417282FBDFA0 /* calendar.png */,
+				B43A2EE5BE7B4D7890A5698F /* components.png */,
+				8AAC5016C39D4C1CB24ED1F1 /* grids.png */,
+				913D7DB9494B4F6296B493DC /* home.png */,
+				F2487BCC325246F6B1CFB081 /* menu.png */,
+				4C362EA21EA343A69EF9A268 /* pages.png */,
+				C11249B905EF47A7A54F45E1 /* settings.png */,
+				B7C77CA21D5142068F498BB8 /* user.png */,
+				3AAA5D1B286C4D46AEAA4472 /* user_min.png */,
+				261F34F4D18A4A0DB5FBB4C3 /* facebook.png */,
+				B5CFE40444D04E11A3A3D39D /* google-plus.png */,
+				74092E87717049368BAA0D61 /* icon.png */,
+				6B423F2C4BD6467D800DB732 /* arrow-back.png */,
+				4DCE5F690C4A47D7BB477ECE /* arrow-back@2x.png */,
+				1084C39D03F34392826A7D60 /* arrow-back@3x.png */,
+				197789EF933345B2B6D78323 /* arrow-left.png */,
+				8AAABEB7816C4E3289CF9611 /* logo.png */,
+				36A564AB6B7A4E228D2D26E5 /* nike1.png */,
+				34493CAB4C24424DB6917A3D /* nike2.jpg */,
+				F646A091A4F2473CB98B38A5 /* chart.png */,
+				890114884A064198B984B994 /* chat.png */,
+				4CF5EC97581441148824B0AD /* gallery.png */,
+				EE6A4EDC3F8545BBAE7F2BCF /* login.png */,
+				D517465BCC4F449BBC0F8C2D /* profile.png */,
+				7058CC38DD3B49B6814581EE /* phone.png */,
+				91C29545EFA34B3D845D2008 /* photos.jpeg */,
+				94D4161327BC42D4883190FC /* projects.jpg */,
+				7C99956CFE8541CE91CCE0BB /* social.jpeg */,
+				9B60857CACA1431A819FB23D /* calendar@2x.png */,
+				E6A4E69517654C9A865233CB /* calendar@3x.png */,
+				D6FD0DAE9F2047F0935952F5 /* components@2x.png */,
+				8B68A6E24FB24601B641EA5D /* components@3x.png */,
+				59382657EA02401DA1659FAC /* grids@2x.png */,
+				8E1DC3F2FFE34418B7908DE8 /* grids@3x.png */,
+				EB918D77A27046F9A9B8BD5D /* home@2x.png */,
+				4549596E034D44FE8BE61BFC /* home@3x.png */,
+				8A16ADF73CE5473FAD0C96AB /* pages@2x.png */,
+				E55C8220A8704C028938DAE0 /* pages@3x.png */,
+				CA9F1978E1F94494866E1438 /* topBarBg.png */,
+				88CC9E1501934B8F9F55A2F9 /* twitter.png */,
+				E6882C41BBEF4726A44A0D05 /* white-logo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				54B1CF4B2C96671200BBC8AD /* SecureEnclaveModule.m */,
+				54B1CF4A2C96671200BBC8AD /* SecureEnclaveModule.swift */,
+				54757C702C965837007A6D5D /* EnclaveModule.m */,
+				54757C6F2C965837007A6D5D /* EnclaveModule.swift */,
+				54757C6C2C965837007A6D5D /* GenericPasswordConvertible.swift */,
+				54757C6E2C965837007A6D5D /* GenericPasswordStore.swift */,
+				54757C6D2C965837007A6D5D /* KeyStoreError.swift */,
+				54355D262C95B72000CB8B0E /* BBSwiftModule.m */,
+				54355D242C95B20400CB8B0E /* ReactNativeStarter-Bridging-Header.h */,
+				54B944822C9591D80016C114 /* BBSwiftModule.swift */,
+				13B07FAE1A68108700A75B9A /* ReactNativeStarter */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* ReactNativeStarterTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				5FFE391FC8CA4C299D923F50 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* ReactNativeStarter.app */,
+				00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9C0BCA035CF520BFE750678 /* Pods-ReactNativeStarter.debug.xcconfig */,
+				9CE0CE5A5E0BC2E78369F9E7 /* Pods-ReactNativeStarter.release.xcconfig */,
+				2B42EC2EDB4D283E1DC704AC /* Pods-ReactNativeStarter-ReactNativeStarterTests.debug.xcconfig */,
+				D6D6568E4736D2264A0953E4 /* Pods-ReactNativeStarter-ReactNativeStarterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* ReactNativeStarterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeStarterTests" */;
+			buildPhases = (
+				A94F563B8B3A7ABA33FECEEE /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				6670D2A8443070E1386F6436 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = ReactNativeStarterTests;
+			productName = ReactNativeStarterTests;
+			productReference = 00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* ReactNativeStarter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeStarter" */;
+			buildPhases = (
+				E6EB7A9A55E9C98D9199C7F3 /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				C00ABDCAE349D549A17EA6B9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactNativeStarter;
+			packageProductDependencies = (
+				542480732C9BE9D400CC7369 /* BBSwift */,
+			);
+			productName = ReactNativeStarter;
+			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeStarter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1540;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeStarter" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				542480702C9BE40E00CC7369 /* XCLocalSwiftPackageReference "BBSwift" */,
+			);
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* ReactNativeStarter */,
+				00E356ED1AD99517003FC87E /* ReactNativeStarterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				996AFAC1B7CF4B76A2BCD4AA /* Lato-Bold.ttf in Resources */,
+				67BE9212F1A44A4D8DB1C0AE /* Lato-BoldItalic.ttf in Resources */,
+				810C0042B05F4A2098849D50 /* Lato-Italic.ttf in Resources */,
+				F8C4F36B7494499E885C04D7 /* Lato-Light.ttf in Resources */,
+				9BA6AD3BF1DB4FD28DFD0B63 /* Lato-LightItalic.ttf in Resources */,
+				AE58B366B50E4BEFA637FD30 /* Lato-Medium.ttf in Resources */,
+				9BDFB352F004468FBBF9BFFA /* Lato-Regular.ttf in Resources */,
+				34A28BFB7DFA45FE96664CE9 /* Lato-Semibold.ttf in Resources */,
+				87B3B70CB29246AFA6C46F5C /* Lato-Thin.ttf in Resources */,
+				56F1AECF95304EC38DACE42F /* RNS_nerd.png in Resources */,
+				78D5921E70594C578DFE86FB /* avatar.png in Resources */,
+				65B7B53583794F7686894C9E /* background.png in Resources */,
+				9EF39E1A94834A46A675A475 /* camera.png in Resources */,
+				CBA0BC10DBCF4399802350A4 /* default-avatar.png in Resources */,
+				2D3344619F4046D2850A342B /* blog.png in Resources */,
+				F33C0CE983C3413786EFED54 /* calendar.png in Resources */,
+				497420B2FDEF4587982659D8 /* components.png in Resources */,
+				2C8EC24BF13547ACA7A37DB7 /* grids.png in Resources */,
+				2C1D2930E9DF48F5BEAEE023 /* home.png in Resources */,
+				E070404DA3E0495991EEE6BA /* menu.png in Resources */,
+				93F37530BC5441EA8961411D /* pages.png in Resources */,
+				CBEBC232B9B149779982D1AA /* settings.png in Resources */,
+				536928F37AB94B67873529D8 /* user.png in Resources */,
+				46DEE6A1191A4B3088CB5EB9 /* user_min.png in Resources */,
+				D1DE63D7040D4F9C8D66C228 /* facebook.png in Resources */,
+				FFB58DD1F2C548DBA6239392 /* google-plus.png in Resources */,
+				C69E8E984A08448DA67A6836 /* icon.png in Resources */,
+				2F3F07424BD249AA83132498 /* arrow-back.png in Resources */,
+				0E8582E5DFBF46129B798F1C /* arrow-back@2x.png in Resources */,
+				02DE8F27BDB848F0A4C304F1 /* arrow-back@3x.png in Resources */,
+				F0FAC7E95860406BA79412C1 /* arrow-left.png in Resources */,
+				168717C83FF742E5B5A8F76D /* logo.png in Resources */,
+				6A3FFC6B41244C2782565F2D /* nike1.png in Resources */,
+				05D72BD2408F4C17B2F46AC8 /* nike2.jpg in Resources */,
+				5D7B9D0FB19A479ABF871254 /* chart.png in Resources */,
+				E8DFE64FB53C4B988C4073C6 /* chat.png in Resources */,
+				AEFDFFA38F9D47EF98C3D9CC /* gallery.png in Resources */,
+				B2C5661A435E47E68E8DB6EC /* login.png in Resources */,
+				717FD7264ABB4981AE22E231 /* profile.png in Resources */,
+				264AED9034754A86AD93A27F /* phone.png in Resources */,
+				CBEF3A97BBFD4109B4EA4F45 /* photos.jpeg in Resources */,
+				9D4BF175705845AC8B4F0B7A /* projects.jpg in Resources */,
+				CA6564BCDFAA43B08B89D3CD /* social.jpeg in Resources */,
+				D8F0B07A7C3B495AAD958F34 /* calendar@2x.png in Resources */,
+				A171D493247849FE8385D2B1 /* calendar@3x.png in Resources */,
+				1A06C96640254F74A1DFD8CD /* components@2x.png in Resources */,
+				6F87DA8BE07C4C24AE20DA95 /* components@3x.png in Resources */,
+				1363E609E0E84B9DAEBC0734 /* grids@2x.png in Resources */,
+				C8F3653B06B64516A821BD4F /* grids@3x.png in Resources */,
+				14CFCC20E26144F1A3B9259B /* home@2x.png in Resources */,
+				DE9266C7BE7F44E0A64937E6 /* home@3x.png in Resources */,
+				0F186760004F4CC2B30834C9 /* pages@2x.png in Resources */,
+				2332A2A3F7F04DA5B9363813 /* pages@3x.png in Resources */,
+				4DDC985649744CB898088650 /* topBarBg.png in Resources */,
+				F003118D05944762A277801F /* twitter.png in Resources */,
+				A8E61F945B6943C0A8065ED7 /* white-logo.png in Resources */,
+				B9A2416AB0E88286CA7CE5B0 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		6670D2A8443070E1386F6436 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter-ReactNativeStarterTests/Pods-ReactNativeStarter-ReactNativeStarterTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter-ReactNativeStarterTests/Pods-ReactNativeStarter-ReactNativeStarterTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter-ReactNativeStarterTests/Pods-ReactNativeStarter-ReactNativeStarterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A94F563B8B3A7ABA33FECEEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeStarter-ReactNativeStarterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C00ABDCAE349D549A17EA6B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter/Pods-ReactNativeStarter-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter/Pods-ReactNativeStarter-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeStarter/Pods-ReactNativeStarter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6EB7A9A55E9C98D9199C7F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeStarter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* ReactNativeStarterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				54757C752C965837007A6D5D /* EnclaveModule.m in Sources */,
+				54355D272C95B72000CB8B0E /* BBSwiftModule.m in Sources */,
+				54B1CF4D2C96671200BBC8AD /* SecureEnclaveModule.m in Sources */,
+				54B1CF4C2C96671200BBC8AD /* SecureEnclaveModule.swift in Sources */,
+				54757C742C965837007A6D5D /* EnclaveModule.swift in Sources */,
+				54757C712C965837007A6D5D /* GenericPasswordConvertible.swift in Sources */,
+				54B944842C9591D80016C114 /* BBSwiftModule.swift in Sources */,
+				54757C732C965837007A6D5D /* GenericPasswordStore.swift in Sources */,
+				54757C722C965837007A6D5D /* KeyStoreError.swift in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* ReactNativeStarter */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B42EC2EDB4D283E1DC704AC /* Pods-ReactNativeStarter-ReactNativeStarterTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = BR6B9825G6;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReactNativeStarterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.aztec-dry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeStarter.app/ReactNativeStarter";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6D6568E4736D2264A0953E4 /* Pods-ReactNativeStarter-ReactNativeStarterTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BR6B9825G6;
+				INFOPLIST_FILE = ReactNativeStarterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.aztec-dry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeStarter.app/ReactNativeStarter";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C0BCA035CF520BFE750678 /* Pods-ReactNativeStarter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR6B9825G6;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFS\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/RNScreens\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsitracing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-nativeconfig\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libevent\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-get-random-values\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-randombytes\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-webassembly\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_TARGET_SRCROOT)/include/\"",
+					"\"${PODS_ROOT}/Headers/Private/Yoga\"",
+				);
+				INFOPLIST_FILE = ReactNativeStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.aztec-dry";
+				PRODUCT_NAME = ReactNativeStarter;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeStarter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE0CE5A5E0BC2E78369F9E7 /* Pods-ReactNativeStarter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR6B9825G6;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/RCT-Folly\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/RNFS\"",
+					"\"${PODS_ROOT}/Headers/Public/RNSVG\"",
+					"\"${PODS_ROOT}/Headers/Public/RNScreens\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Codegen\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsitracing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-nativeconfig\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/fmt\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/libevent\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-get-random-values\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-randombytes\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-webassembly\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_TARGET_SRCROOT)/include/\"",
+					"\"${PODS_ROOT}/Headers/Private/Yoga\"",
+				);
+				INFOPLIST_FILE = ReactNativeStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.aztec-dry";
+				PRODUCT_NAME = ReactNativeStarter;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeStarter-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CXX = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = false;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CXX = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				USE_HERMES = false;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeStarterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		542480702C9BE40E00CC7369 /* XCLocalSwiftPackageReference "BBSwift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../BBSwift;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		542480732C9BE9D400CC7369 /* BBSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BBSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

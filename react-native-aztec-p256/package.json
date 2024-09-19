@@ -1,0 +1,56 @@
+{
+    "name": "reac-native-aztec-p256",
+    "version": "0.0.1",
+    "description": "A React Native library integrating aztec wallet with p256 signer.",
+    "main": "src/index.js",
+    "type": "module",
+    "types": "./dest/index.d.ts",
+    "exports": {
+        ".": "./dest/index.js"
+    },
+    "scripts": {
+        "start": "react-native start",
+        "test": "jest"
+    },
+    "resolutions": {
+        "@aztec/entrypoints": "file:../yarn-project-async/entrypoints",
+        "@aztec/types": "file:../yarn-project-async/types",
+        "@aztec/bb.js": "file:../react-native-bb.js",
+        "@aztec/foundation": "file:../yarn-project-async/foundation",
+        "@aztec/aztec.js": "file:../yarn-project-async/aztec.js"
+    },
+    "dependencies": {
+        "@aztec/accounts": "file:../yarn-project-async/accounts",
+        "@aztec/aztec.js": "file:../yarn-project-async/aztec.js",
+        "@aztec/bb.js": "file:../react-native-bb.js",
+        "@aztec/circuit-types": "file:../yarn-project-async/circuit-types",
+        "@aztec/circuits.js": "file:../yarn-project-async/circuits.js",
+        "@aztec/noir-contracts.js": "0.46.1",
+        "@noble/curves": "^1.4.2",
+        "@react-native-async-storage/async-storage": "^1.24.0",
+        "ethers": "^6.13.2",
+        "react": "18.2.0",
+        "react-native": "0.74.5",
+        "react-native-keychain": "^8.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.21.0",
+        "@babel/preset-react": "^7.21.0",
+        "babel-jest": "^29.5.0",
+        "buffer": "^6.0.3",
+        "jest": "^29.5.0",
+        "metro-react-native-babel-preset": "^0.77.0",
+        "typescript": "^5.0.0"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*"
+    },
+    "jest": {
+        "preset": "react-native",
+        "transformIgnorePatterns": [
+            "node_modules/(?!(react-native|@react-native|react-native-bb.js)/)"
+        ]
+    }
+}
