@@ -5,3 +5,6 @@
 [submodule "react-native-bb.js"]
 	path = react-native-bb.js
 	url = https://github.com/porco-rosso-j/react-native-bb.js
+[submodule "yarn-project-async"]
+	path = yarn-project-async
+	url = https://github.com/porco-rosso-j/yarn-project-async
