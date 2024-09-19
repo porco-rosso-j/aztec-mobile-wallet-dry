@@ -2,3 +2,6 @@
 	path = BBSwift
 	url = https://github.com/porco-rosso-j/bb-swift
 	branch = v0.46.1-2
+[submodule "react-native-bb.js"]
+	path = react-native-bb.js
+	url = https://github.com/porco-rosso-j/react-native-bb.js
