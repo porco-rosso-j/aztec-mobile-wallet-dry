@@ -1,8 +1,0 @@
-{
-  "extends": ".",
-  "compilerOptions": {
-    "outDir": "dest/browser",
-    "tsBuildInfoFile": ".tsbuildinfo.browser",
-  },
-  "include": ["src"],
-}

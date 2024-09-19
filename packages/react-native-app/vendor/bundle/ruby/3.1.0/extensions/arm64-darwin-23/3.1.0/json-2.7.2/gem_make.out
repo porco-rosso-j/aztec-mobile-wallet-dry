@@ -1,0 +1,13 @@
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/json-2.7.2/ext/json
+/Users/jack-sw/.rbenv/versions/3.1.2/bin/ruby -I /Users/jack-sw/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20240908-76695-mkpvh2.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/json-2.7.2/ext/json
+make DESTDIR\= clean
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/json-2.7.2/ext/json
+make DESTDIR\=
+make: Nothing to be done for `all'.
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/json-2.7.2/ext/json
+make DESTDIR\= install

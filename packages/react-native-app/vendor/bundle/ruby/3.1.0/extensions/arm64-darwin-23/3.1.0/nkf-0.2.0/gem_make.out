@@ -1,0 +1,15 @@
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+/Users/jack-sw/.rbenv/versions/3.1.2/bin/ruby -I /Users/jack-sw/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20240908-76695-xmeg6e.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/jack-sw/Codes/aztec/mobile/react-native-starter/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20240908-76695-mgx7za

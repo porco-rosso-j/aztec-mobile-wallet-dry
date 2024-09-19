@@ -1,0 +1,6 @@
+[submodule "BBSwift"]
+	path = BBSwift
+	url = https://github.com/porco-rosso-j/bb-swift
+[submodule "bb-swift"]
+	path = bb-swift
+	url = https://github.com/porco-rosso-j/bb-swift
