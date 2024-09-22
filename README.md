@@ -34,6 +34,3 @@ Currently, BBSwift exposes around 10 methods from bb_rs, such as hashing, grumpk
 
 ### Incompatibility with aztec modules
 Asynchronous version of aztec modules are necessary as interacting with react native’s native modules synchronously is not a recommended way and likely to cause many issues. In this fork, most functions use async/await. 
-
-### limited iOS support ( + android not implemented )
-The demo uses XCode’s simulator instead of a real iPhone because @porco's iPhone ios version is 13 while this app only supports >14 iOS. Android should also be supported.
