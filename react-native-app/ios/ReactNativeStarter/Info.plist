@@ -33,6 +33,20 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+
+	<!-- Added: Face ID Usage Description -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>We use Face ID to securely authenticate your identity.</string>
+
+	<!-- Optional: Restrict app to devices with Face ID -->
+	
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+		<string>face-id</string>
+	</array>
+	
+
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Bold.ttf</string>
@@ -65,6 +79,8 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<!-- Uncomment the following line if Face ID is essential -->
+		<string>face-id</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

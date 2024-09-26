@@ -31,7 +31,6 @@
 		497420B2FDEF4587982659D8 /* components.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A2EE5BE7B4D7890A5698F /* components.png */; };
 		4DDC985649744CB898088650 /* topBarBg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F1978E1F94494866E1438 /* topBarBg.png */; };
 		536928F37AB94B67873529D8 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C77CA21D5142068F498BB8 /* user.png */; };
-		542480742C9BE9D400CC7369 /* BBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 542480732C9BE9D400CC7369 /* BBSwift */; };
 		54355D272C95B72000CB8B0E /* BBSwiftModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54355D262C95B72000CB8B0E /* BBSwiftModule.m */; };
 		54757C712C965837007A6D5D /* GenericPasswordConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6C2C965837007A6D5D /* GenericPasswordConvertible.swift */; };
 		54757C722C965837007A6D5D /* KeyStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54757C6D2C965837007A6D5D /* KeyStoreError.swift */; };
@@ -41,6 +40,8 @@
 		54B1CF4C2C96671200BBC8AD /* SecureEnclaveModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1CF4A2C96671200BBC8AD /* SecureEnclaveModule.swift */; };
 		54B1CF4D2C96671200BBC8AD /* SecureEnclaveModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1CF4B2C96671200BBC8AD /* SecureEnclaveModule.m */; };
 		54B944842C9591D80016C114 /* BBSwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B944822C9591D80016C114 /* BBSwiftModule.swift */; };
+		54CBBC892C9C3C1500FC90D8 /* BBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 54CBBC882C9C3C1500FC90D8 /* BBSwift */; };
+		54CBBC8D2C9C3CBA00FC90D8 /* BBSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 54CBBC8C2C9C3CBA00FC90D8 /* BBSwift */; };
 		56F1AECF95304EC38DACE42F /* RNS_nerd.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F7907D7964EC69FA7E39D /* RNS_nerd.png */; };
 		5D7B9D0FB19A479ABF871254 /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = F646A091A4F2473CB98B38A5 /* chart.png */; };
 		65B7B53583794F7686894C9E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDA1B30D3A40BEAF01E922 /* background.png */; };
@@ -132,6 +133,7 @@
 		54B1CF4A2C96671200BBC8AD /* SecureEnclaveModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureEnclaveModule.swift; sourceTree = "<group>"; };
 		54B1CF4B2C96671200BBC8AD /* SecureEnclaveModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureEnclaveModule.m; sourceTree = "<group>"; };
 		54B944822C9591D80016C114 /* BBSwiftModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSwiftModule.swift; sourceTree = "<group>"; };
+		54CBBC842C9C342800FC90D8 /* BBSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BBSwift; path = ../../BBSwift; sourceTree = "<group>"; };
 		59382657EA02401DA1659FAC /* grids@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "grids@2x.png"; path = "../assets/images/tabbar/grids@2x.png"; sourceTree = "<group>"; };
 		6B423F2C4BD6467D800DB732 /* arrow-back.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "arrow-back.png"; path = "../assets/images/icons/arrow-back.png"; sourceTree = "<group>"; };
 		7058CC38DD3B49B6814581EE /* phone.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = phone.png; path = ../assets/images/phone.png; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CBBC892C9C3C1500FC90D8 /* BBSwift in Frameworks */,
 				07FCBCBB1B310438A95516F2 /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542480742C9BE9D400CC7369 /* BBSwift in Frameworks */,
+				54CBBC8D2C9C3CBA00FC90D8 /* BBSwift in Frameworks */,
 				8955C32B54C8BF68A34A5D32 /* Pods_ReactNativeStarter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +238,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54CBBC842C9C342800FC90D8 /* BBSwift */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				A75A4179C17DF7B128141DFD /* Pods_ReactNativeStarter.framework */,
 				41EDA4CEF36700FE0DE3622F /* Pods_ReactNativeStarter_ReactNativeStarterTests.framework */,
@@ -377,6 +381,9 @@
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
 			name = ReactNativeStarterTests;
+			packageProductDependencies = (
+				54CBBC882C9C3C1500FC90D8 /* BBSwift */,
+			);
 			productName = ReactNativeStarterTests;
 			productReference = 00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -398,7 +405,7 @@
 			);
 			name = ReactNativeStarter;
 			packageProductDependencies = (
-				542480732C9BE9D400CC7369 /* BBSwift */,
+				54CBBC8C2C9C3CBA00FC90D8 /* BBSwift */,
 			);
 			productName = ReactNativeStarter;
 			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeStarter.app */;
@@ -431,7 +438,7 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
-				542480702C9BE40E00CC7369 /* XCLocalSwiftPackageReference "BBSwift" */,
+				54CBBC852C9C348900FC90D8 /* XCLocalSwiftPackageReference "BBSwift" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -1104,14 +1111,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		542480702C9BE40E00CC7369 /* XCLocalSwiftPackageReference "BBSwift" */ = {
+		54CBBC852C9C348900FC90D8 /* XCLocalSwiftPackageReference "BBSwift" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../BBSwift;
+			relativePath = ../../BBSwift;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		542480732C9BE9D400CC7369 /* BBSwift */ = {
+		54CBBC882C9C3C1500FC90D8 /* BBSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BBSwift;
+		};
+		54CBBC8C2C9C3CBA00FC90D8 /* BBSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BBSwift;
 		};

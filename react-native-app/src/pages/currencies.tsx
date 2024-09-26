@@ -5,39 +5,49 @@ import {
   ImageSourcePropType,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import MainLayout from '../layouts/MainLayout';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import constants from '../constants';
 import IconButton from '../components/IconButton';
-import {
-  ArrowLeft,
-} from '@tamagui/lucide-icons';
+import { ArrowLeft } from '@tamagui/lucide-icons';
+import { RootStackParamList } from 'App';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const CURRENCIES = [
   {
     image: require('../../assets/images/chains/ethereum.png'),
-    name: 'ETH',
+    name: 'ETH'
   },
   {
     image: require('../../assets/images/currencies/usdc.png'),
-    name: 'USDC',
-  },
+    name: 'USDC'
+  }
 ];
 
-function Currency({image, name}: {image: ImageSourcePropType; name: string}) {
-  const navigation = useNavigation();
+function Currency({
+  image,
+  name
+}: {
+  image: ImageSourcePropType,
+  name: string
+}) {
+  // const navigation = useNavigation();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const route = useRoute<RouteProp<RootStackParamList, 'Currencies'>>();
 
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('Send' as never);
+        navigation.navigate('Send', route.params);
       }}
       style={{
         flexDirection: 'row',
-        alignItems: 'center',
-      }}>
+        alignItems: 'center'
+      }}
+    >
       <View
         style={{
           width: 50,
@@ -47,13 +57,14 @@ function Currency({image, name}: {image: ImageSourcePropType; name: string}) {
           justifyContent: 'center',
           alignItems: 'center',
           marginRight: 20,
-          overflow: 'hidden',
-        }}>
+          overflow: 'hidden'
+        }}
+      >
         <Image
           style={{
             width: 50,
             height: 50,
-            resizeMode: 'cover',
+            resizeMode: 'cover'
           }}
           source={image}
         />
@@ -63,8 +74,9 @@ function Currency({image, name}: {image: ImageSourcePropType; name: string}) {
           style={{
             fontSize: 16,
             fontWeight: 'bold',
-            color: constants.primaryColor,
-          }}>
+            color: constants.primaryColor
+          }}
+        >
           {name}
         </Text>
       </View>
@@ -79,7 +91,8 @@ export default function Currencies() {
   return (
     <MainLayout
       statusBarStyle="light-content"
-      statusBarBackgroundColor="#1F2937">
+      statusBarBackgroundColor="#1F2937"
+    >
       <View style={{}}>
         <View
           style={{
@@ -88,10 +101,11 @@ export default function Currencies() {
             backgroundColor: '#1F2937',
             alignItems: 'center',
             paddingBottom: 30,
-            flexDirection: 'row',
-          }}>
+            flexDirection: 'row'
+          }}
+        >
           <IconButton
-            style={{backgroundColor: 'transparent'}}
+            style={{ backgroundColor: 'transparent' }}
             icon={<ArrowLeft color="white" />}
             onPress={() => {
               navigation.goBack();
@@ -101,8 +115,9 @@ export default function Currencies() {
             style={{
               fontSize: 16,
               textTransform: 'uppercase',
-              color: 'white',
-            }}>
+              color: 'white'
+            }}
+          >
             Choose a currency
           </Text>
         </View>
@@ -116,8 +131,9 @@ export default function Currencies() {
           backgroundColor: 'white',
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
-          marginTop: -20,
-        }}>
+          marginTop: -20
+        }}
+      >
         {CURRENCIES.map((currency, index) => (
           <Currency key={index} {...currency} />
         ))}

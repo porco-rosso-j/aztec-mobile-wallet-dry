@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "composite": true,
     "resolveJsonModule": true,
+    "allowArbitraryExtensions": true,
   },
   // js files should be ts...?
   "include": ["src", "*.tsx", "*.ts",  "App.tsx", "index.js", "app.json", "shim.js", "init.js"],

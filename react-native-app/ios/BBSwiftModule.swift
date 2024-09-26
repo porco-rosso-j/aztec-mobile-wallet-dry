@@ -52,7 +52,7 @@ func pedersenCommit(_ inputs: [NSNumber], resolve: @escaping RCTPromiseResolveBl
 
         // Convert RustVec<UInt8> to [UInt8]
         let result: [UInt8] = resultRustVec.toArray()
-        print("Result array in pedersenCommit: \(result)")
+        // print("Result array in pedersenCommit: \(result)")
 
         // Convert [UInt8] to [NSNumber]
         let resultNSNumber = result.map { NSNumber(value: $0) }
@@ -84,7 +84,7 @@ func pedersenCommit(_ inputs: [NSNumber], resolve: @escaping RCTPromiseResolveBl
             }
 
             let result = resultRustVec.toArray()
-            print("Result array in pedersenHash: \(result)")
+            // print("Result array in pedersenHash: \(result)")
 
             let resultNSNumber = result.map { NSNumber(value: $0) }
 

@@ -4,7 +4,6 @@
  */
 
 import 'react-native-get-random-values';
-import './shim';
 import './init';
 
 import { AppRegistry } from 'react-native';

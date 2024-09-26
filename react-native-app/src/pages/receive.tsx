@@ -1,36 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useEffect, useState } from 'react';
-import {
-  Image,
-  ImageSourcePropType,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import React from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
 import MainLayout from '../layouts/MainLayout';
-import Button from '../components/Button';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import numeral from 'numeral';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import constants from '../constants';
 import IconButton from '../components/IconButton';
-import {
-  ArrowDown,
-  ArrowLeft,
-  ArrowUp,
-  Copy,
-  LogIn,
-  LogOut
-} from '@tamagui/lucide-icons';
+import { ArrowLeft, Copy } from '@tamagui/lucide-icons';
 import QRCode from 'react-native-qrcode-svg';
-import { formatAddress } from '../scripts';
-
-const SAFE_ADDRESS = constants.safeAddresses.ethereum.sepolia;
+import { formatAddress } from '../scripts/index';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from 'App';
 
 export default function Receive() {
-  const navigation = useNavigation();
-  const route = useRoute();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const route = useRoute<RouteProp<RootStackParamList, 'Receive'>>();
+  const address = route.params?.address;
 
   return (
     <MainLayout
@@ -88,7 +73,7 @@ export default function Receive() {
         >
           Let people scan your QR Code below
         </Text>
-        <QRCode size={200} value={SAFE_ADDRESS} />
+        <QRCode size={200} value={address} />
         <Text
           style={{
             fontSize: 14,
@@ -115,7 +100,7 @@ export default function Receive() {
               color: constants.lightTextColor
             }}
           >
-            {formatAddress(SAFE_ADDRESS, true)}
+            {formatAddress(address, true)}
           </Text>
           <TouchableOpacity
             style={{

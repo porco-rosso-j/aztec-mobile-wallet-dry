@@ -1,29 +1,29 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Alert, Text, TextInput, View} from 'react-native';
 import MainLayout from '../layouts/MainLayout';
 import Button from '../components/Button';
-import {useNavigation, useRoute} from '@react-navigation/native';
-import constants, { ACCOUNT_ADDRESS, ACCOUNT_SIGNING_PUBKEY, SANDBOX_URL, TOKEN_ADDRESS } from '../constants';
+import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
+import constants from '../constants';
 import IconButton from '../components/IconButton';
 import {ArrowLeft} from '@tamagui/lucide-icons';
-import {   
-  getPublicKey,
-  aztecJs, 
-  getEcdsaWallet,  
-  sendTokenPublic
-} from 'react-native-p256';
+import { RootStackParamList } from 'App';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useToken } from '../hooks/useToken';
 
-export default function Send() {
-  const navigation = useNavigation();
+export default function Send() {  
+  const navigation =
+  useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const route = useRoute<RouteProp<RootStackParamList, 'Send'>>();
+  const { sendTokenPublic } = useToken();
   const [amount, setAmount] = useState<string>();
   const [address, setAddress] = useState<string>();
   const [loading, setLoading] = useState(false);
-  const route = useRoute();
 
   const onConfirm = async () => {
     console.log("onConfirm....")
     setLoading(true);
+
     try {
       if (!amount) {
         Alert.alert('Please enter an amount');
@@ -33,75 +33,28 @@ export default function Send() {
         Alert.alert('Please enter a recipient address');
         return;
       }
+
     } catch (error) {
       console.log(error);
     }
 
     try {
 
-        const pxe = aztecJs.createPXEClient(SANDBOX_URL);
-        console.log("pxe: ", pxe);
-    
-        const ecdsaContract = await getEcdsaWallet(
-          pxe,
-          aztecJs.AztecAddress.fromString(ACCOUNT_ADDRESS),
-          Buffer.from(ACCOUNT_SIGNING_PUBKEY.x),
-          Buffer.from(ACCOUNT_SIGNING_PUBKEY.y)
-        );
+        const token = route.params?.token;
+        const account = route.params?.account;
 
-        const tx = await sendTokenPublic(TOKEN_ADDRESS, address!, Number(amount!), ecdsaContract);
+        if (!token) {
+          Alert.alert('Please enter a token');
+          return;
+        }
+
+        if (!account) {
+          Alert.alert('Please set an account'); 
+          return;
+        }
+
+        const tx = await sendTokenPublic(address!, Number(amount!), account, token);
         console.log('tx: ', tx);
-
-
-        // const input = new Fr(
-        //   Buffer.from([
-        //     6, 196, 4, 126, 220, 48, 240, 65, 72, 173, 40, 101, 187, 150, 245, 115,
-        //     253, 193, 91, 5, 45, 148, 91, 74, 184, 111, 200, 144, 36, 203, 76, 229
-        //   ])
-        // );
-    
-        // const input64 = Buffer.from([
-        //     10,  20,  11, 112, 191,  28, 187, 209,
-        //     16, 224, 109,  67, 220, 252,  21, 253,
-        //    197, 127, 255, 251,  40,  36, 222,  99,
-        //     58, 214, 146, 187, 154,  28, 243, 170,
-        //     29,  75,  79, 144,  90, 243, 224,
-        //     103,  12, 230,  99, 104, 113, 118,
-        //      25, 138, 105, 134, 189, 217, 252,
-        //     167, 219, 252, 232,  99, 176, 187,
-        //      16, 237, 187,  75
-        //   ]);
-    
-        //   const scalar = Buffer.from([
-        //       38, 209, 203, 129,  53,  25, 228, 154,
-        //       86, 202, 221, 170,   4, 204,  73, 124,
-        //       76, 104, 130,  60, 211, 101, 127, 187,
-        //       70, 204,  95, 191, 132, 198, 207,  36        
-        //   ]);
-      
-        // console.log("ecdsaContract: ", ecdsaContract);
-        // const message = "I'm sending money";
-    
-        // const sig = await signMessage(message);
-        // console.log("sig: ", sig);
-    
-        // const accountInstance = await EcdsaAccountContractInstance.at(
-        //       ecdsaContract.getAddress(),
-        //       ecdsaContract
-        // );
-    
-        // console.log("accountInstance: ", accountInstance);
-    
-        // const returnValue = await accountInstance
-        //   .methods.test_verify_signature(
-        //     await parseMessage(message),
-        //     sig,
-        //     pubkey.x,
-        //     pubkey.y
-        //   )
-        //   .simulate();
-    
-        // console.log("returnValue: ", returnValue); 
   
     } catch (error) {
       console.log(error);

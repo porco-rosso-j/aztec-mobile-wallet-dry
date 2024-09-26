@@ -1,229 +1,105 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { Text, View } from 'react-native';
 import MainLayout from '../layouts/MainLayout';
-// import Button from '../components/Button';
 import { useNavigation } from '@react-navigation/native';
-// import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import constants, { ACCOUNT_ADDRESS, ACCOUNT_SIGNING_PUBKEY, SANDBOX_URL, TOKEN_ADDRESS } from '../constants';
-import { formatAddress } from '../scripts';
+import constants, { SANDBOX_URL } from '../constants';
 import IconButton from '../components/IconButton';
-import { format, set } from 'date-fns';
 import numeral from 'numeral';
 import {
   ArrowDown,
   ArrowUp,
   LogIn,
   LogOut,
-  RefreshCcw
+  RefreshCcw,
+  Coins
 } from '@tamagui/lucide-icons';
-import { useBalance } from '../hooks/useBalance';
 import {   
   getPublicKey,
   aztecJs, 
   getEcdsaWallet,  
-  sendTokenPublic
-} from 'react-native-p256';
-
-const SAFE_ADDRESS = '0x1234567890abcdef1234567890abcdef12345678';
-const RECIPIENT_ADDRESS = '0xaabbccddeeff00112233445566778899aabbccdd';
-
-const TRANSACTIONS = [
-  {
-    currency: 'USDC',
-    amount: 400,
-    recipient: RECIPIENT_ADDRESS,
-    sender: SAFE_ADDRESS,
-    confirmed: false,
-    date: new Date()
-  },
-  {
-    currency: 'USDC',
-    amount: 400,
-    recipient: RECIPIENT_ADDRESS,
-    sender: SAFE_ADDRESS,
-    date: new Date('2024-07-13T00:00:00Z'),
-    confirmed: true
-  },
-  {
-    currency: 'USDC',
-    amount: 300,
-    recipient: SAFE_ADDRESS,
-    sender: RECIPIENT_ADDRESS,
-    date: new Date('2024-07-12T00:00:00Z'),
-    confirmed: true
-  },
-  {
-    currency: 'USDC',
-    amount: 3000,
-    recipient: RECIPIENT_ADDRESS,
-    sender: SAFE_ADDRESS,
-    date: new Date('2024-07-11T00:00:00Z'),
-    confirmed: true
-  },
-  {
-    currency: 'USDC',
-    amount: 200,
-    recipient: SAFE_ADDRESS,
-    sender: RECIPIENT_ADDRESS,
-    date: new Date('2024-07-11T00:00:00Z'),
-    confirmed: true
-  }
-];
-
-function TransactionItem({
-  currency,
-  amount,
-  recipient,
-  sender,
-  date,
-  confirmed
-}: {
-  currency: string,
-  amount: number,
-  recipient: string,
-  sender: string,
-  date: Date,
-  confirmed: boolean
-}) {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        paddingVertical: 10,
-        //paddingHorizontal: 15,
-        alignItems: 'center',
-        gap: 10,
-        opacity: confirmed ? 1 : 0.2
-      }}
-    >
-      <View
-        style={{
-          width: 50,
-          height: 50,
-          borderRadius: 20,
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: constants.primaryColor
-        }}
-      >
-        {recipient === SAFE_ADDRESS ? (
-          <ArrowDown color="white" />
-        ) : (
-          <ArrowUp color="white" />
-        )}
-      </View>
-      <View>
-        <Text
-          style={{
-            color: constants.lightTextColor,
-            fontSize: 10
-          }}
-        >
-          {recipient === SAFE_ADDRESS ? 'From' : 'To'}
-        </Text>
-        <Text
-          style={{
-            color: constants.primaryColor,
-            fontSize: 12,
-            fontWeight: 'bold'
-          }}
-        >
-          {formatAddress(recipient === SAFE_ADDRESS ? sender : recipient)}
-        </Text>
-      </View>
-      <View
-        style={{
-          marginLeft: 'auto',
-          alignItems: 'flex-end'
-        }}
-      >
-        <View style={{ flexDirection: 'row', gap: 5, alignItems: 'center' }}>
-          <Text
-            style={{
-              color:
-                recipient === SAFE_ADDRESS
-                  ? constants.redColor
-                  : constants.greenColor,
-              fontWeight: 'bold',
-              fontSize: 18
-            }}
-          >
-            {recipient === SAFE_ADDRESS ? '-' : '+'}
-            {numeral(amount).format('0,0.00')}
-          </Text>
-          <Text
-            style={{
-              color: constants.primaryColor,
-              fontSize: 10,
-              fontWeight: 'bold'
-            }}
-          >
-            {currency}
-          </Text>
-        </View>
-        <Text
-          style={{
-            color: constants.lightTextColor,
-            fontSize: 10
-          }}
-        >
-          {format(date, 'dd/MM/yyyy')}
-        </Text>
-      </View>
-    </View>
-  );
-}
+  getEcdsaAccount,
+  generateKeyPair
+} from 'react-native-aztec-p256';
+import { RootStackParamList } from 'App';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import TransactionItem, { TRANSACTIONS } from './transactions';
+import { useBalance } from '../hooks/useBalance';
+import { useToken } from '../hooks/useToken';
 
 export default function Home() {
-  console.log('Home');
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   const [loggedIn, setLoggedIn] = useState(false);
-
-  const [address, setAddress] = useState<string>(ACCOUNT_ADDRESS);
-  const [token, setToken] = useState<string>(TOKEN_ADDRESS);
   const [account, setAccount] = useState<aztecJs.AccountWallet>();
+
+  const { token, mintTokenPublic, deloyToken } = useToken();
   const { balance, updateBalance } = useBalance(token, account);
+
   console.log('balance: ', balance);
-  console.log('account: ', account);
-
-  useEffect(() => {
-    const setup = async () => {
-      const account = await getEcdsaWallet(
-        aztecJs.createPXEClient(SANDBOX_URL),
-        aztecJs.AztecAddress.fromString(address),
-        Buffer.from(ACCOUNT_SIGNING_PUBKEY.x),
-        Buffer.from(ACCOUNT_SIGNING_PUBKEY.y)
-      );
-      setAccount(account);
-    };
-    if (address && !account) {
-      setup();
-    }
-  }, [address,account]);
-
-  const onRefresh = async () => {
-    updateBalance();
-  };
+  console.log('account address: ', account?.getAddress().toString());
 
   const logIn = async () => {
     if (loggedIn) {
       return;
     }
     try {
-      // await getPublicKey();
+
+      const pxe = aztecJs.createPXEClient(SANDBOX_URL)
+      let publicKey; 
+
+      try {
+        publicKey = await getPublicKey();
+      } catch (e) {
+        console.log("error", e);
+        publicKey = await generateKeyPair();
+      }
+      console.log("publicKey", publicKey);
+      const key = aztecJs.Fr.random();
+
+      console.log("key", key.toString());
+
+      const account = await (await getEcdsaAccount(
+        pxe,
+        key,
+        Buffer.from(publicKey.x),
+        Buffer.from(publicKey.y)
+      )
+      .deploy())
+      .wait();
+
+      // console.log("account", account);
+      console.log("account created")
+      
+      // instantiate from scratch to get AccountWallet instead of Wallet
+      const wallet = await getEcdsaWallet(
+        pxe,
+        account.wallet.getAddress(),
+        Buffer.from(publicKey.x),
+        Buffer.from(publicKey.y)
+      );
+      // console.log("wallet", wallet);
+      console.log("wallet instantiated")
+
+      setAccount(wallet);
       setLoggedIn(true);
     } catch (error) {
       console.log(error);
-      try {
-        // await generateKeyPair();
-        setLoggedIn(true);
-      } catch (error) {}
     }
   };
 
-  useEffect(() => {
-    logIn();
-  }, []);
+  const onRefresh = async () => {
+    console.log('onRefresh called');
+    updateBalance();
+  };
+
+  const onFaucet = async () => {
+    console.log('onFaucet called');
+    const tokenAddr = await deloyToken(account);
+    console.log('deloyToken done');
+    await mintTokenPublic(10, account, tokenAddr);
+    console.log('mintTokenPublic done');
+    updateBalance(tokenAddr);
+  };
 
   return (
     <MainLayout
@@ -288,7 +164,7 @@ export default function Home() {
             >
               <IconButton
                 onPress={() => {
-                  navigation.navigate('Currencies' as never);
+                  navigation.navigate('Currencies', { token, account });
                 }}
                 disabled={!loggedIn}
                 theme="main"
@@ -328,6 +204,29 @@ export default function Home() {
                 }}
               >
                 Receive
+              </Text>
+            </View>
+            <View
+              style={{
+                alignItems: 'center',
+                gap: 5
+              }}
+            >
+              <IconButton
+                disabled={!loggedIn}
+                theme="secondary"
+                onPress={onFaucet}
+                icon={<Coins color={constants.primaryColor} />}
+              />
+              <Text
+                style={{
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  color: 'white'
+                }}
+              >
+                Faucet
               </Text>
             </View>
             <View

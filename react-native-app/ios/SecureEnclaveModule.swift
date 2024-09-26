@@ -26,6 +26,36 @@ extension Data {
         let format = options.contains(.upperCase) ? "%02hhX" : "%02hhx"
         return self.map { String(format: format, $0) }.joined()
     }
+    
+    init?(fromHexEncodedString string: String) {
+
+            // Convert 0 ... 9, a ... f, A ...F to their decimal value,
+            // return nil for all other input characters
+            func decodeNibble(u: UInt8) -> UInt8? {
+                switch(u) {
+                case 0x30 ... 0x39:
+                    return u - 0x30
+                case 0x41 ... 0x46:
+                    return u - 0x41 + 10
+                case 0x61 ... 0x66:
+                    return u - 0x61 + 10
+                default:
+                    return nil
+                }
+            }
+
+            self.init(capacity: string.utf8.count/2)
+            
+            var iter = string.utf8.makeIterator()
+            while let c1 = iter.next() {
+                guard
+                    let val1 = decodeNibble(u: c1),
+                    let c2 = iter.next(),
+                    let val2 = decodeNibble(u: c2)
+                else { return nil }
+                self.append(val1 << 4 + val2)
+            }
+        }
 }
 
 
@@ -112,11 +142,18 @@ class SecureEnclaveModule: NSObject {
         }
     }
 
-    @objc(sign:message:resolve:reject:)
-    func sign(_ accountName: String, message: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+    @objc(sign:hexMessage:resolve:reject:)
+    func sign(_ accountName: String, hexMessage: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
         do {
-            let message = message.data(using: .utf8)!
-          let key = try getSigningPrivkeyWithContext(accountName: accountName as String, usage: "Complete Face ID to sign the message")
+            // let message = message.data(using: .utf8)!
+            // let message = Data(fromHexEncodedString: hexMessage)!
+            print("hexMessage: \(hexMessage)")
+            guard let message = Data(fromHexEncodedString: hexMessage) else {
+            reject("INVALID_HEX_MESSAGE", "Invalid hex string for message", nil)
+            return
+            }
+
+            let key = try getSigningPrivkeyWithContext(accountName: accountName as String, usage: "Complete Face ID to sign the message")
             let signature = try key.signature(for: message)
             resolve(["signature": signature.derRepresentation.hexEncodedString()])
         } catch {
