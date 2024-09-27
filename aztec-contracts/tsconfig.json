@@ -1,31 +1,30 @@
-{ 
-    "compilerOptions": {
-      "declaration": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "allowJs": true,
-      "module": "ESNext",
-      "moduleResolution": "Bundler",
-      "target": "ESNext",
-      "useUnknownInCatchVariables": false,
-      "sourceMap": true,
-      "strict": true,
-      "skipLibCheck": true,
-  
-      "composite": true,
-      "resolveJsonModule": true,
-      "baseUrl": "./",
-      "experimentalDecorators": true,
-      "rootDir": "./",
-      "outDir": "./dist"
-    },
-    "include": ["src", "src/**/*.json", "test"],
-    "exclude": ["node_modules", "dist", "trash"],
-    "ts-node": {
-        "transpileOnly": true,
-        "experimentalSpecifierResolution": "node",
-        "esm": true
-      }
-  }
-  
+{
+	"compilerOptions": {
+		"declaration": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"target": "ESNext",
+		"useUnknownInCatchVariables": false,
+		"sourceMap": true,
+		"strict": true,
+		"skipLibCheck": true,
+
+		"composite": true,
+		"resolveJsonModule": true,
+		"baseUrl": "./",
+		"experimentalDecorators": true,
+		"rootDir": "./",
+		"outDir": "./dist"
+	},
+	"include": ["src", "src/**/*.json", "test", "contracts/**/*.json"],
+	"exclude": ["node_modules", "dist", "trash"],
+	"ts-node": {
+		"transpileOnly": true,
+		"experimentalSpecifierResolution": "node",
+		"esm": true
+	}
+}
