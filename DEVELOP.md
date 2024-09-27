@@ -71,7 +71,7 @@ pod install --repo-update
 <img width="838" alt="Screenshot 2024-09-27 at 14 03 53" src="https://github.com/user-attachments/assets/96ac963f-112a-41ea-84a2-e4547dea7dbb">
 
 
-Select `My Mac (Designed for iPhone)` as the `Device Target`. And click the Build button at the top left corner of your xcode project. It takes a few minutes to build the project.
+Select `My Mac (Designed for iPhone)` as the `Device Target`. After waiting a bit til indexing finishes, click the Build button at the top left corner of your Xcode project. It takes a few minutes to build the project.
 
 ### After successfull build
 
