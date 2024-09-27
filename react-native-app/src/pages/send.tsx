@@ -9,14 +9,12 @@ import IconButton from '../components/IconButton';
 import {ArrowLeft} from '@tamagui/lucide-icons';
 import { RootStackParamList } from 'App';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-// import { useToken } from '../hooks/useToken';
 import { sendTokenPublic } from '../scripts/token';
 
 export default function Send() {  
   const navigation =
   useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const route = useRoute<RouteProp<RootStackParamList, 'Send'>>();
-  // const { sendTokenPublic } = useToken();
   const [amount, setAmount] = useState<string>();
   const [address, setAddress] = useState<string>();
   const [loading, setLoading] = useState(false);
