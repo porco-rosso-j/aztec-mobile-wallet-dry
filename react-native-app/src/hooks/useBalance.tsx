@@ -1,16 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { aztecJs, contractsJsToken } from 'react-native-aztec-p256';
 
-export const useBalance = (
-  token: string,
-  account: aztecJs.AccountWallet | undefined
-) => {
+export const useBalance = (account: aztecJs.AccountWallet | undefined) => {
   const [balance, setBalance] = useState<number>(0);
 
-  const getBalance = async (token?: string) => {
-    if (!account || balance !== 0 || token === '') {
+  const getBalance = async (token: string) => {
+    if (!account || token === '') {
       return;
     }
+
     try {
       const tokenContract = await contractsJsToken.TokenContract.at(
         aztecJs.AztecAddress.fromString(token),
@@ -29,19 +27,8 @@ export const useBalance = (
     }
   };
 
-  useEffect(() => {
-    getBalance();
-  }, [account, balance, token]);
-
-  const updateBalance = async (token?: string) => {
-    if (!account) {
-      return;
-    }
-    await getBalance(token);
-  };
-
   return {
     balance,
-    updateBalance
+    getBalance
   };
 };

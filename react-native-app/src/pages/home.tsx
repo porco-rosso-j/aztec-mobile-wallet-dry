@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import MainLayout from '../layouts/MainLayout';
 import { useNavigation } from '@react-navigation/native';
@@ -23,18 +23,17 @@ import {
 import { RootStackParamList } from 'App';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import TransactionItem, { TRANSACTIONS } from './transactions';
-import { useBalance } from '../hooks/useBalance';
-import { useToken } from '../hooks/useToken';
+import { deloyToken, getBalance, mintTokenPublic } from '../scripts/token';
 
 export default function Home() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [account, setAccount] = useState<aztecJs.AccountWallet>();
+  const [token, setToken] = useState<string>('');
+  const [balance, setBalance] = useState<number>(0);
 
-  const { token, mintTokenPublic, deloyToken } = useToken();
-  const { balance, updateBalance } = useBalance(token, account);
-
+  console.log("token: ", token)
   console.log('balance: ', balance);
   console.log('account address: ', account?.getAddress().toString());
 
@@ -89,7 +88,8 @@ export default function Home() {
 
   const onRefresh = async () => {
     console.log('onRefresh called');
-    updateBalance();
+    const balance = await getBalance(account, token);
+    setBalance(balance);
   };
 
   const onFaucet = async () => {
@@ -98,8 +98,20 @@ export default function Home() {
     console.log('deloyToken done');
     await mintTokenPublic(10, account, tokenAddr);
     console.log('mintTokenPublic done');
-    updateBalance(tokenAddr);
+    const balance = await getBalance(account, tokenAddr);
+
+    setToken(tokenAddr);
+    setBalance(balance);
   };
+
+
+  useEffect(() => {
+    const _getBalance = async () => {
+      const balance = await getBalance(account, token);
+      setBalance(balance);
+    }
+    _getBalance();
+  }, [account, token]);
 
   return (
     <MainLayout
@@ -189,7 +201,7 @@ export default function Home() {
             >
               <IconButton
                 disabled={!loggedIn}
-                theme="secondary"
+                theme="main"
                 onPress={() => {
                   navigation.navigate('Receive' as never);
                 }}
@@ -214,7 +226,7 @@ export default function Home() {
             >
               <IconButton
                 disabled={!loggedIn}
-                theme="secondary"
+                theme="main"
                 onPress={onFaucet}
                 icon={<Coins color={constants.primaryColor} />}
               />
@@ -237,7 +249,7 @@ export default function Home() {
             >
               <IconButton
                 disabled={!loggedIn}
-                theme="secondary"
+                theme="main"
                 onPress={onRefresh}
                 icon={<RefreshCcw color={constants.primaryColor} />}
               />

@@ -50,8 +50,8 @@ if you are unfamiliar with xcode, please refer to [the official doc](https://dev
 Open the xcode, click `Open Existing Project` and open the `./react-native-app/ios` folder.
 
 ### Set bundle ID
-Refer to [this page](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution) to learn how to set bundle ID. Build will fail it this is not set.
 
+Refer to [this page](https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution) to learn how to set bundle ID. Build will fail it this is not set.
 
 ### Install BBSwfit on xCode
 
@@ -70,7 +70,6 @@ pod install --repo-update
 
 <img width="838" alt="Screenshot 2024-09-27 at 14 03 53" src="https://github.com/user-attachments/assets/96ac963f-112a-41ea-84a2-e4547dea7dbb">
 
-
 Select `My Mac (Designed for iPhone)` as the `Device Target`. After waiting a bit til indexing finishes, click the Build button at the top left corner of your Xcode project. It takes a few minutes to build the project.
 
 ### After successfull build
@@ -85,14 +84,14 @@ You can do the following things after the app is built and its simulator app is 
 
 <img width="279" alt="Screenshot 2024-09-27 at 14 08 08" src="https://github.com/user-attachments/assets/7852b8d8-cd49-4c7e-991a-9e72272bd800">
 
-Note that every transaction ( incl. tx simulation ) asks you to provide FaceID/TouchID four times. This is because a transaction requires two signatures for `appPayload` and `feePayload`, and also, our `SecureEnclave.swift` asks for two signs for each signature. *Should be fixed and it's possible.
+Note that every transaction ( incl. tx simulation ) asks you to provide FaceID/TouchID four times. This is because a transaction requires two signatures for `appPayload` and `feePayload`, and also, our `SecureEnclave.swift` asks for two signs for each signature. \*Should be fixed and it's possible.
 
 ## Troubleshooting
 
-1. `BBSwift not found` in building on xcode, although it's already added to the project dependencies.   
+1. `BBSwift not found` in building on xcode, although it's already added to the project dependencies.  
    close and re-launch xcode app. it may need to do this every time (after) you run `pod install`.
 
-2. M1 mac specific errors in building on xcode.   
+2. M1 mac specific errors in building on xcode.  
    if you are using M1 chip and facing unknown errors, you may better switch to rosetta 2 emulation mode. [Switch to rostta](https://www.godo.dev/tutorials/macos-x86_64-shell-from-arm64/)
 
    ```shell
@@ -100,10 +99,20 @@ Note that every transaction ( incl. tx simulation ) asks you to provide FaceID/T
    pod install --repo-update
    ```
 
-3. `verification == true` error at signing.   
+3. `MsgHandlingError(message: "unable to initiate PIF transfer session (operation in progress?)")`
+
+restart xcode, or delete derived data
+
+```shell
+rm -rf ~/Library/Developer/Xcode/DerivedData/*
+cd react-native-app/ios
+pod install --repo-update
+```
+
+4. `[Error: (JSON-RPC PROPAGATED) Cannot satisfy constraint 'verification == true']` at signing.  
    secp256r1 signature generation through secure enclave API is still a bit unstable. try couple of times.
 
-4. `artifact doesn't match` error at runtime.   
+5. `artifact doesn't match` error at runtime.  
    try rebuilding the project on xcode.
 
 ## iPhone Development
