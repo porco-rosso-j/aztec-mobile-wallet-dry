@@ -33,11 +33,12 @@ yarn
 
 ## Sandbox
 
-install and run sandbox with version 0.46.1
+install and run sandbox with version 0.46.1 ( run docker first, e.g. docker desktop ).  
 
 ```shell
 cd .aztec
-export VERSION=0.46.1 aztec-up
+export VERSION=0.46.1
+aztec-up
 aztec-sandbox
 ```
 
